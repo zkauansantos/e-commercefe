@@ -1,3 +1,7 @@
+import * as Popover from '@radix-ui/react-popover';
+
+import { UserCircle } from 'phosphor-react';
+
 import MenuList from '../MenuList';
 
 import {
@@ -21,6 +25,24 @@ export default function Header() {
             <MenuViewPort />
           </div>
         </MenuRoot>
+
+        <div style={{ display: 'flex', zIndex: '5', gap: 15 }}>
+          <Popover.Root>
+            <Popover.Trigger>
+              <UserCircle size={30} />
+            </Popover.Trigger>
+
+            <Popover.Portal>
+
+              <Popover.Content>
+                <div>
+                  Mundo
+                </div>
+              </Popover.Content>
+
+            </Popover.Portal>
+          </Popover.Root>
+        </div>
       </Content>
     </Container>
   );
