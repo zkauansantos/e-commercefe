@@ -16,7 +16,7 @@ export const MenuTrigger = styled(NavigationMenu.Trigger)`
   line-height: 1;
   border-radius: 4px;
   font-size: 15px;
-  color: var(--violet11);
+  color: ${({ theme }) => theme.colors.text};
 
   &:focus {
     box-shadow: 0 0 0 2px var(--violet7);

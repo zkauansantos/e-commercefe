@@ -64,9 +64,9 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+  padding: 0px 5px;
 
-export const ContainerPopover = styled.div`
-  z-index: 5;
-
+  h1 {
+    color: #fff;
+  }
 `;
