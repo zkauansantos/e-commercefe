@@ -22,40 +22,6 @@ export const Container = styled.header`
   }
 `;
 
-export const MenuRoot = styled(NavigationMenu.Root)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  z-index: 1;
-`;
-
-export const MenuViewPort = styled(NavigationMenu.Viewport)`
-  position: relative;
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 6px;
-  min-height: 60vh;
-  overflow: hidden;
-  height: var(--radix-navigation-menu-viewport-height);
-  transition: width, height, 300ms ease;
-
-  &[data-state='open'] {
-    animation: ${animations.scaleIn} 200ms ease;
-  }
-
-  &[data-state='closed'] {
-    animation: ${animations.scaleOut} 200ms ease;
-  }
-
-  @media only screen and (min-width: 600px) {
-    width: var(--radix-navigation-menu-viewport-width);
-  }
-`;
-
 export const Content = styled.div`
   position: relative;
   width: 100%;
@@ -68,5 +34,38 @@ export const Content = styled.div`
 
   h1 {
     color: #fff;
+  }
+`;
+
+export const MenuRoot = styled(NavigationMenu.Root)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  z-index: 2;
+`;
+
+export const MenuViewPort = styled(NavigationMenu.Viewport)`
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 6px;
+  min-height: 550px;
+  overflow: hidden;
+  transition: width, height, 300ms ease;
+
+  &[data-state='open'] {
+    animation: ${animations.scaleIn} 200ms ease;
+  }
+
+  &[data-state='closed'] {
+    animation: ${animations.scaleOut} 200ms ease;
+  }
+
+  @media only screen and (min-width: 600px) {
+    width: var(--radix-navigation-menu-viewport-width);
   }
 `;

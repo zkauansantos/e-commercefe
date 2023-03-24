@@ -88,7 +88,7 @@ export const UserLoginPopover = styled.div`
 
 export const PopoverContent = styled(Popover.Content)`
   position: relative;
-
+  z-index: 1;
   .arrow {
     height: 8px;
     width: 16px;
