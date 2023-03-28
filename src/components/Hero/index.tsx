@@ -1,62 +1,55 @@
-import { SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
+/* eslint-disable react/no-array-index-key */
+import 'flickity/css/flickity.css';
 
 import {
-  MapPin,
-  Truck,
   ArrowsLeftRight,
+  MapPin,
   Percent,
+  Truck,
 } from 'phosphor-react';
+
+import { flickityOptions } from '../../utils/flickityOptions';
 
 import {
   Container,
   Content,
   View,
-  Swiper,
   Benefits,
+  Carousel,
 } from './styles';
 
 export default function Hero() {
   return (
     <Container>
       <Content>
-        <Swiper
-          mousewheel={{ releaseOnEdges: true }}
-          freeMode
-          navigation
-          pagination={{ clickable: true }}
-          grabCursor
-          modules={[Navigation, Pagination]}
-          slidesPerView={1}
-          loop
+        <Carousel
+          className="carousel"
+          elementType="div"
+          options={{ ...flickityOptions, cellAlign: 'center' }}
+          disableImagesLoaded={false}
+          reloadOnUpdate
+          static
         >
-          <SwiperSlide>
-            <View />
-          </SwiperSlide>
-          <SwiperSlide>
-            <View />
-          </SwiperSlide>
-          <SwiperSlide>
-            <View />
-          </SwiperSlide>
-        </Swiper>
+          {Array.from({ length: 5 }).map((i, q) => (
+            <View key={q} />
+          ))}
+        </Carousel>
 
         <Benefits>
           <div>
-            <MapPin color="#00ACE6" size={20} />
+            <MapPin />
             <p>Compre no site e <span>retire na loja</span></p>
           </div>
           <div>
-            <Truck color="#00ACE6" size={20} />
+            <Truck />
             <p><span>Frete grátis</span> confira as regras</p>
           </div>
           <div>
-            <ArrowsLeftRight color="#00ACE6" size={20} />
+            <ArrowsLeftRight />
             <p><span>Até 30 dias</span> pra solicitar sua troca</p>
           </div>
           <div>
-            <Percent color="#00ACE6" size={20} />
+            <Percent />
             <p><span>Ganhe 5% de desconto</span> no pix</p>
           </div>
         </Benefits>

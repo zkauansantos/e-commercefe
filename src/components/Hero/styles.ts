@@ -1,6 +1,5 @@
+import Flickity from 'react-flickity-component';
 import styled from 'styled-components';
-
-import * as Carousel from 'swiper/react';
 
 export const Container = styled.div`
   background: linear-gradient(to bottom, ${({ theme }) => theme.colors.bgDark} 81%, transparent 0%);
@@ -19,23 +18,51 @@ export const Content = styled.div`
   padding: 0px 5px;
 `;
 
-export const Swiper = styled(Carousel.Swiper)`
-  height: 460px;
-  width: 90%;
-  border-radius: 0px 0px 4px 4px;
+export const Carousel = styled(Flickity)`
+    height: 460px;
+    width: 90%;
+    border-radius: 0px 0px 4px 4px;
 
-  .swiper-button-prev{
-    color: ${({ theme }) => theme.colors.details};
-  }
+    .flickity-page-dots {
+      bottom: 0px;
+    }
 
-  .swiper-button-next {
-    color: ${({ theme }) => theme.colors.details};
-  }
+    .flickity-page-dots .dot {
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    .flickity-page-dots .dot.is-selected {
+      background: white;
+    }
+
+    .flickity-button {
+      background: none;
+    }
+
+    .flickity-prev-next-button {
+      width: 50px;
+      height: 60px;
+      border-radius: 5px;
+    }
+    .flickity-button-icon {
+      fill: ${({ theme }) => theme.colors.details};
+    }
+    .flickity-prev-next-button.previous {
+      left: -45px;
+    }
+    .flickity-prev-next-button.next {
+      right: -45px;
+    }
 `;
 
 export const View = styled.div`
   width: 100%;
   height: 100%;
+  border-radius: 0px 0px 4px 4px;
   background: url('https://artwalk.vteximg.com.br/arquivos/ids/363730/2656%20-%20AW%20%20BANNER%20-%20DESKTOP%201.png?v=638146633633000000') center center no-repeat;
   background-size: cover;
 
@@ -56,6 +83,11 @@ export const Benefits = styled.div`
     align-items: center;
     gap: 8px;
     padding-left: 24px;
+
+    svg {
+      color: ${({ theme }) => theme.colors.details};
+      font-size: 20px;
+    }
 
     p{
       opacity: 0.9;
