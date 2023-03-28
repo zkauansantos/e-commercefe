@@ -11,14 +11,17 @@
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.1.2",
     "@radix-ui/react-popover": "^1.0.5",
+    "flickity": "2.3.0",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-flickity-component": "^4.0.5",
     "react-router-dom": "^6.9.0",
     "styled-components": "^5.3.9",
     "swiper": "^9.1.1"
   },
   "devDependencies": {
+    "@types/flickity": "^2.2.7",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/react-router-dom": "^5.3.3",
