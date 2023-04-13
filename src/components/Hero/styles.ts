@@ -1,7 +1,7 @@
 import Flickity from 'react-flickity-component';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.main`
   background: linear-gradient(to bottom, ${({ theme }) => theme.colors.bgDark} 81%, transparent 0%);
   display: grid;
   place-items: center;

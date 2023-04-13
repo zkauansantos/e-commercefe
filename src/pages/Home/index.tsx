@@ -3,6 +3,7 @@ import Highlights from '../../components/Highlights';
 import ExploreCategories from '../../components/ExploreCategories';
 import Banner from '../../components/Banner';
 import BrandsCarousel from '../../components/BrandsCarousel';
+import Footer from '../../components/Footer';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ExploreCategories />
       <Banner />
       <BrandsCarousel />
+      <Footer />
     </>
   );
 }
