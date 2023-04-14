@@ -1,14 +1,16 @@
 import { FacebookLogo, InstagramLogo } from 'phosphor-react';
 import { FooterContainer, Content } from './styles';
+import SubFooter from './SubFooter';
 
 export default function Footer() {
   return (
     <FooterContainer>
       <Content>
-        <h1>LOGO\/\/</h1>
+        <h1>OOOOOOOO</h1>
 
         <div className="container">
-          <div className="flex">
+          <div className="container-categories">
+
             <div className="category">
               <strong>Tênis</strong>
               <ul>
@@ -18,6 +20,7 @@ export default function Footer() {
                 <li>CASUAL</li>
               </ul>
             </div>
+
             <div className="category">
               <strong>Coleções especiais</strong>
               <ul>
@@ -34,6 +37,7 @@ export default function Footer() {
                 <li> Catálogo de Produtos</li>
               </ul>
             </div>
+
             <div className="category">
               <strong>Masculino</strong>
               <ul>
@@ -47,6 +51,7 @@ export default function Footer() {
                 <li>Outlet</li>
               </ul>
             </div>
+
             <div className="category">
               <strong>Feminino</strong>
               <ul>
@@ -63,7 +68,7 @@ export default function Footer() {
           </div>
 
           <aside>
-            <div className="aside">
+            <div className="others">
               <div className="category">
                 <strong>Institucional</strong>
                 <ul>
@@ -99,6 +104,8 @@ export default function Footer() {
           </aside>
         </div>
       </Content>
+
+      <SubFooter />
     </FooterContainer>
   );
 }

@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 64px;
   background: ${({ theme }) => theme.colors.bgDark};
-
 `;
 
 export const Content = styled.div`
@@ -28,7 +28,7 @@ export const Content = styled.div`
     display: flex;
     gap: 155px;
 
-    .flex {
+    .container-categories {
       display: flex;
       gap: 64px;
 
@@ -58,7 +58,7 @@ export const Content = styled.div`
       flex-direction: column;
       gap: 120px;
 
-      .aside {
+      .others {
         display: flex;
         gap: 48px;
 
@@ -101,5 +101,4 @@ export const Content = styled.div`
         }
     }
   }
-
 `;
