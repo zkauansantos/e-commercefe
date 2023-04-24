@@ -4,14 +4,20 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
-      bgDark: string
-      bgSemiDark: string
-      bgLight: string
-      bgSemiLight: string
-      dark: string
-      separator: string
-      details: string
-      text: string
+      dark: {
+        800: string,
+        600: string,
+        500: string,
+      },
+      light: {
+        400: string,
+        300: string,
+        200: string,
+        100: string,
+      },
+      blue: {
+        700: string
+      },
     }
   }
 }

@@ -22,7 +22,7 @@ export const Container = styled.header`
     width: 100%;
     top: 5rem;
     left: 0;
-    background-color: ${({ theme }) => theme.colors.bgSemiDark};
+    background-color: ${({ theme }) => theme.colors.dark['500']};
     perspective: 2000px;
   }
 `;
