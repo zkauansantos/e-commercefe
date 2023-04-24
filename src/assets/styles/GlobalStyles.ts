@@ -8,12 +8,13 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Rubik', 'Roboto', sans-serif;
   }
 
-  body {
+  body, html {
     overflow-x: hidden;
+    font-size: 62.5%;
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 1rem;
   }
 
   ::-webkit-scrollbar-track {

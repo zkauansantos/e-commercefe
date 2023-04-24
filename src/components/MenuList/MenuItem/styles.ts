@@ -8,22 +8,17 @@ export const MenuTrigger = styled(NavigationMenu.Trigger)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2px;
-  padding: 8px 12px;
+  gap: 0.2rem;
+  padding: 0.8rem 1.2rem;
   outline: none;
   user-select: none;
   font-weight: 500;
   line-height: 1;
-  border-radius: 4px;
-  font-size: 15px;
+  border-radius: 0.4rem;
   color: ${({ theme }) => theme.colors.text};
 
-  &:focus {
-    box-shadow: 0 0 0 2px var(--violet7);
-  }
-
-  &:hover{
-    background-color: var(--violet3);
+  span {
+    font-size: 1.6rem;
   }
 `;
 
@@ -51,7 +46,7 @@ export const MenuContent = styled(NavigationMenu.Content)`
    animation-name: ${animations.exitToRight};
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 60rem) {
     width: auto;
   }
 `;

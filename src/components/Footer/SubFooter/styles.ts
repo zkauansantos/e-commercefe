@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1240px;
+  max-width: 124rem;
   padding: 3em 0;
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -20,7 +20,7 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
+    gap: 0.8rem;
     padding-left: 1.6rem;
 
     div {
@@ -28,11 +28,11 @@ export const Content = styled.div`
       justify-content: center;
       flex-direction: column;
       align-items: flex-start;
-      gap: 16px;
+      gap: 1.6rem;
 
       p {
-        line-height: 20px;
-        font-size: 12px;
+        line-height: 2rem;
+        font-size: 1.2rem;
         font-style: italic;
 
         :nth-child(1){
@@ -44,12 +44,12 @@ export const Content = styled.div`
 
   .payment-methods {
     strong {
-      margin-left: 24px;
+      margin-left: 2.4rem;
     }
 
     ul {
       list-style: none;
-      margin-top: 24px;
+      margin-top: 2.4rem;
       display: grid;
       grid-template-columns: repeat(3, auto);
 
@@ -72,17 +72,17 @@ export const Content = styled.div`
   }
 
   .address {
-    padding: 32px 0 0 1.6rem;
-    font-size: 12px;
+    padding: 3.2rem 0 0 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
   }
 
   .vtex {
-    padding: 32px 0 0 0;
+    padding: 3.2rem 0 0 0;
     grid-column: 3;
     text-transform: uppercase;
-    margin-left: 24px;
-    font-size: 12px;
+    margin-left: 2.4rem;
+    font-size: 1.2rem;
   }
 `;

@@ -9,17 +9,17 @@ export const Container = styled.main`
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1240px;
+  max-width: 124rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  padding: 0px 5px;
+  gap: 2.4rem;
+  padding: 0px 0.5rem;
 `;
 
 export const Carousel = styled(Flickity)`
-    height: 460px;
+    height: 46rem;
     width: 90%;
     border-radius: 0px 0px 4px 4px;
 
@@ -28,8 +28,8 @@ export const Carousel = styled(Flickity)`
     }
 
     .flickity-page-dots .dot {
-      width: 12px;
-      height: 12px;
+      width: 1.2rem;
+      height: 1.2rem;
       opacity: 1;
       background: transparent;
       border: 2px solid white;
@@ -44,18 +44,18 @@ export const Carousel = styled(Flickity)`
     }
 
     .flickity-prev-next-button {
-      width: 50px;
-      height: 60px;
+      width: 5rem;
+      height: 6rem;
       border-radius: 5px;
     }
     .flickity-button-icon {
       fill: ${({ theme }) => theme.colors.details};
     }
     .flickity-prev-next-button.previous {
-      left: -45px;
+      left: -4.5rem;
     }
     .flickity-prev-next-button.next {
-      right: -45px;
+      right: -4.5rem;
     }
 `;
 
@@ -73,7 +73,7 @@ export const Benefits = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 46px;
+  height: 4.6rem;
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.bgSemiLight};
 
@@ -81,17 +81,17 @@ export const Benefits = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    padding-left: 24px;
+    gap: 0.8rem;
+    padding-left: 2.4rem;
 
     svg {
       color: ${({ theme }) => theme.colors.details};
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     p{
       opacity: 0.9;
-      font-size: 12px;
+      font-size: 1.2rem;
       text-transform: uppercase;
 
       span {

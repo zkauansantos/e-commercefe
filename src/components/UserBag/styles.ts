@@ -4,7 +4,7 @@ import * as Popover from '@radix-ui/react-popover';
 
 export const UserBagContainer = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 2.4rem;
   align-items: center;
   justify-content: space-between;
 
@@ -24,17 +24,17 @@ export const UserBagContainer = styled.div`
     .counter {
       display: grid;
       place-items: center;
-      font-size: 10px;
-      height: 15px;
-      width: 15px;
+      font-size: 1rem;
+      height: 1.4rem;
+      width: 1.4rem;
       position: absolute;
       background: ${({ theme }) => theme.colors.details};
       color: ${({ theme }) => theme.colors.bgSemiDark};
       border-radius: 50%;
-      bottom: -3px;
+      bottom: -0.3rem;
       z-index: 2;
       font-weight: bold;
-      right: 0px;
+      right: 0;
     }
   }
 `;
@@ -55,25 +55,25 @@ export const UserTrigger = styled(Popover.Trigger)`
 
 export const UserLoginPopover = styled.div`
   position: absolute;
-  top: 23px;
-  right: -90px;
+  top: 2.2rem;
+  right: -9rem;
   background: ${({ theme }) => theme.colors.bgSemiDark};
-  width: 180px;
-  height: 150px;
-  border-radius: 4px;
+  width: 18rem;
+  height: 15rem;
+  border-radius: 0.4rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 2.4rem;
 
   button {
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background: none;
     display: grid;
     place-items: center;
-    min-width: 120px;
-    border-radius: 4px;
+    min-width: 12rem;
+    border-radius: 0.4rem;
     border: 1px solid ${({ theme }) => theme.colors.separator};
     color: ${({ theme }) => theme.colors.text};
     cursor: pointer;
@@ -89,11 +89,12 @@ export const UserLoginPopover = styled.div`
 export const PopoverContent = styled(Popover.Content)`
   position: relative;
   z-index: 1;
+
   .arrow {
-    height: 8px;
-    width: 16px;
+    height: 0.8rem;
+    width: 1.6rem;
     position: absolute;
-    bottom: 5px;
+    bottom: 0.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
   }

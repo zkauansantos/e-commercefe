@@ -7,7 +7,7 @@ export default function ExploreCategories() {
   return (
     <Container>
       <Content>
-        <div className="title"><h3>O que você está buscando ?</h3></div>
+        <h3>O que você está buscando ?</h3>
 
         <CategoryGroupContainer justify="space-around">
           <Category width="450px" bg="https://www.artwalk.com.br/arquivos/O_que_voc%C3%AA_esta_buscando_tenis.jpg">

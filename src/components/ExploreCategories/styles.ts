@@ -4,26 +4,23 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 830px;
+  min-height: 83rem;
   background: ${({ theme }) => theme.colors.bgDark};
 `;
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1240px;
+  max-width: 124rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 
-  .title {
-
-    h3 {
-      font-size: 28px;
-      font-style: italic;
-      color: ${({ theme }) => theme.colors.text};
-      opacity: 0.5;
-    }
+  h3 {
+    font-size: 2.8rem;
+    font-style: italic;
+    color: ${({ theme }) => theme.colors.text};
+    opacity: 0.5;
   }
 `;
 
@@ -32,11 +29,11 @@ export const CategoryGroupContainer = styled.div<{ justify: string }>`
   display: flex;
   justify-content: ${({ justify }) => justify};
   align-items: center;
-  margin-top: 64px;
+  margin-top: 6.4rem;
 `;
 
 export const Category = styled.div<{ width: string, bg: string }>`
-  height: 300px;
+  height: 30rem;
   background: url(${({ bg }) => bg}) center center no-repeat;
   background-size: cover;
   width: ${({ width }) => width};
@@ -55,16 +52,16 @@ export const Category = styled.div<{ width: string, bg: string }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 2rem;
     font-style: italic;
-    font-size: 42px;
+    font-size: 4.2rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -80px;
+    left: -8rem;
 
     svg {
-      font-size: 25px;
+      font-size: 2.4rem;
     }
   }
 `;

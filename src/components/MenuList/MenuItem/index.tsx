@@ -10,7 +10,7 @@ export default function MenuItem({ label }: MenuItemProps) {
   return (
     <NavigationMenu.Item>
       <MenuTrigger>
-        {label}
+        <span>{label}</span>
       </MenuTrigger>
       <MenuContent />
     </NavigationMenu.Item>

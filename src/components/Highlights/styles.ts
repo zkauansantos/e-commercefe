@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import Flickity from 'react-flickity-component';
 
 export const Container = styled.section`
-  padding: 64px;
+  padding: 6.4rem;
   display: grid;
   place-items: center;
   `;
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1240px;
+  max-width: 124rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,12 +20,13 @@ export const ContainerHighlights = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
 
   h3 {
+    font-size: 1.8rem;
     font-style: italic;
     color: ${({ theme }) => theme.colors.bgSemiDark};
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 `;
 
@@ -33,9 +34,9 @@ export const Carousel = styled(Flickity)`
   width: 100%;
 
   .flickity-prev-next-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
+    width: 4rem;
+    height: 4rem;
+    border-radius: .5rem;
   }
 
   .flickity-button {
@@ -44,35 +45,35 @@ export const Carousel = styled(Flickity)`
     ::before {
       content: '';
       position: absolute;
-      width: 30px;
-      height: 4px;
-      top: 18px;
+      width: 3rem;
+      height: 0.4rem;
+      top: 1.8rem;
       border-radius: 5px;
       background: ${({ theme }) => theme.colors.details};
     }
   }
 
   .flickity-prev-next-button.previous {
-    left: -60px;
+    left: -6rem;
 
     ::before {
-      left: 15px;
+      left: 1.4rem;
     }
   }
 
   .flickity-prev-next-button.next {
-    right: -60px;
+    right: -6rem;
 
     ::before {
-      right: 15px;
+      right: 1.4rem;
     }
   }
 `;
 
 export const Card = styled.div`
-  height: 400px;
-  width: 280px;
-  margin: 0 30px;
+  height: 40rem;
+  width: 28rem;
+  margin: 0 3rem;
   background: linear-gradient(to bottom, #ffffff, #ffffff, #ccc);
   border-radius: 4px;
   display: flex;
@@ -86,20 +87,24 @@ export const Card = styled.div`
     justify-content: space-between;
 
     p {
-      margin-bottom: 40px;
+      margin-bottom: 4rem;
       text-transform: uppercase;
-      font-size: 15px;
+      font-size: 1.6rem;
       opacity: 0.9;
     }
 
     div {
       display: flex;
       flex-direction: column;
+
+      span, strong {
+        font-size: 1.6rem;
+      }
     }
 
     .button {
       width: 100%;
-      margin-top: 24px;
+      margin-top: 2.4rem;
       display: grid;
       place-items: center;
 
@@ -108,7 +113,7 @@ export const Card = styled.div`
         border-radius: 4px;
         width: 75%;
         text-transform: uppercase;
-        padding: 8px ;
+        padding: 0.8rem ;
         border: none;
         background: ${({ theme }) => theme.colors.dark};
         color: ${({ theme }) => theme.colors.text};
@@ -131,14 +136,15 @@ export const ContainerMostPurchased = styled.div`
   h3 {
     font-style: italic;
     color: ${({ theme }) => theme.colors.bgSemiDark};
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    font-size: 1.8rem;
   }
 
   .list {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 3rem;
 
     div {
       margin: 0;

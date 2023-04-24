@@ -7,15 +7,19 @@ import * as animations from '../../assets/styles/animations/menu';
 export const Container = styled.header`
   position: relative;
   background: ${({ theme }) => theme.colors.bgDark};
-  height: 80px;
+  height: 8rem;
   display: grid;
   place-items: center;
+
+  h1 {
+    font-size: 3.2rem;
+  }
 
   .view-position {
     position: absolute;
     display: flex;
     width: 100%;
-    top: 50px;
+    top: 5rem;
     left: 0;
     background-color: ${({ theme }) => theme.colors.bgSemiDark};
     perspective: 2000px;

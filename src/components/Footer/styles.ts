@@ -5,47 +5,47 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 64px;
+  margin-top: 6.4rem;
   background: ${({ theme }) => theme.colors.bgDark};
 `;
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1240px;
+  max-width: 124rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 50px 0;
+  padding: 5rem 0;
 
   h1 {
     color: ${({ theme }) => theme.colors.text};
-    margin-bottom: 50px;
-    font-size: 48px;
+    margin-bottom: 5rem;
+    font-size: 4.8rem;
   }
 
   .container {
     display: flex;
-    gap: 155px;
+    gap: 15.5rem;
 
     .container-categories {
       display: flex;
-      gap: 64px;
+      gap: 6.4rem;
 
       .category {
         strong {
-          font-size: 16px;
+          font-size: 1.6rem;
           color: ${({ theme }) => theme.colors.text};
         }
 
         ul {
-          margin-top: 8px;
-          line-height: 22px;
+          margin-top: 0.8rem;
+          line-height: 2.2rem;
           list-style: none;
 
           li {
-            margin-top: 8px;
-            font-size: 14px;
+            margin-top: 0.8rem;
+            font-size: 1.4rem;
             opacity: 0.8;
             color: ${({ theme }) => theme.colors.details};
           }
@@ -57,27 +57,27 @@ export const Content = styled.div`
       font-weight: bold;
       display: flex;
       flex-direction: column;
-      gap: 120px;
+      gap: 12rem;
 
       .others {
         display: flex;
-        gap: 48px;
+        gap: 4.8rem;
 
         .category {
           strong {
-            font-size: 16px;
+            font-size: 1.6rem;
             color: ${({ theme }) => theme.colors.text};
           }
 
           ul {
-            margin-top: 8px;
+            margin-top: 0.8rem;
             list-style: none;
-            line-height: 22px;
+            line-height: 2.2rem;
 
             li {
               max-width: 90%;
-              font-size: 14px;
-              margin-top: 8px;
+              font-size: 1.4rem;
+              margin-top: 0.8rem;
               opacity: 0.8;
               color: ${({ theme }) => theme.colors.details};
             }
@@ -92,11 +92,11 @@ export const Content = styled.div`
 
           div {
             display: flex;
-            gap: 16px;
-            margin-top: 24px;
+            gap: 1.6rem;
+            margin-top: 2.4rem;
 
             svg {
-              font-size: 48px;
+              font-size: 4.8rem;
               color: ${({ theme }) => theme.colors.details};
             }
           }

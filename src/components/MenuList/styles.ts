@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-
 import * as animations from '../../assets/styles/animations/menu';
 
 export const MenuListStyled = styled(NavigationMenu.List)`
   display: flex;
-  gap: 24px;
-  border-radius: 6px;
+  gap: 2.4rem;
+  border-radius: 0.6rem;
   list-style: none;
   color: ${({ theme }) => theme.colors.text};
 
@@ -20,8 +19,8 @@ export const MenuIndicator = styled(NavigationMenu.Indicator)`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 10px;
-  top: 25px;
+  height: 1rem;
+  top: 2.4rem;
   overflow: hidden;
   z-index: 1;
   transition: width, transform 250ms ease;
@@ -38,9 +37,9 @@ export const MenuIndicator = styled(NavigationMenu.Indicator)`
     position: relative;
     top: 70%;
     background-color: white;
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     transform: rotate(45deg);
-    border-top-left-radius: 2px;
+    border-top-left-radius: 0.2rem;
   }
 `;

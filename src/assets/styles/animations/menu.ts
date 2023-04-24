@@ -25,7 +25,7 @@ export const scaleOut = keyframes`
 export const enterFromLeft = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-20rem);
   }
   to {
     opacity: 1;
@@ -36,7 +36,7 @@ export const enterFromLeft = keyframes`
 export const enterFromRight = keyframes`
   from {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(20rem);
   }
   to {
     opacity: 1;
@@ -51,7 +51,7 @@ export const exitToRight = keyframes`
   }
   to {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(20rem);
   }
 `;
 
@@ -62,7 +62,7 @@ export const exitToLeft = keyframes`
   }
   to {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-20rem);
   }
 `;
 
