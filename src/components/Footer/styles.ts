@@ -54,6 +54,7 @@ export const Content = styled.div`
     }
 
     aside {
+      font-weight: bold;
       display: flex;
       flex-direction: column;
       gap: 120px;
@@ -74,6 +75,7 @@ export const Content = styled.div`
             line-height: 22px;
 
             li {
+              max-width: 90%;
               font-size: 14px;
               margin-top: 8px;
               opacity: 0.8;

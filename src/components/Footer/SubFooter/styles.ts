@@ -8,21 +8,20 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 0 2em;
-  margin-bottom: 40px;
   width: 100%;
   max-width: 1240px;
+  padding: 3em 0;
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
-  margin-top: 48px;
 
   .description {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
+    padding-left: 1.6rem;
 
     div {
       display: flex;
@@ -39,15 +38,11 @@ export const Content = styled.div`
         :nth-child(1){
           font-weight: bold ;
         }
-
-        :nth-child(3){
-          max-width: 90%;
-        }
       }
     }
   }
 
-  .form-payment {
+  .payment-methods {
     strong {
       margin-left: 24px;
     }
@@ -77,23 +72,17 @@ export const Content = styled.div`
   }
 
   .address {
-    padding: 32px 0;
-
-    p {
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+    padding: 32px 0 0 1.6rem;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   .vtex {
-    padding: 32px 0;
+    padding: 32px 0 0 0;
     grid-column: 3;
-
-    strong {
-      text-transform: uppercase;
-      margin-left: 24px;
-      font-size: 12px;
-    }
+    text-transform: uppercase;
+    margin-left: 24px;
+    font-size: 12px;
   }
 `;

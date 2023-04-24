@@ -24,7 +24,7 @@ export default function SubFooter() {
           </div>
         </div>
 
-        <div className="form-payment">
+        <div className="payment-methods">
           <strong>Formas de pagamento</strong>
 
           <ul>
@@ -37,7 +37,7 @@ export default function SubFooter() {
           </ul>
         </div>
 
-        <div className="form-payment">
+        <div className="payment-methods">
           <strong>Compra 100% segura</strong>
 
           <ul>
@@ -47,13 +47,9 @@ export default function SubFooter() {
           </ul>
         </div>
 
-        <div className="address">
-          <p>Brasília - DF, Loja Virtual</p>
-        </div>
+        <p className="address">Brasília - DF, Loja Virtual</p>
 
-        <div className="vtex">
-          <strong>Powered by: Vtex</strong>
-        </div>
+        <strong className="vtex">Powered by: @zkauansantos</strong>
       </Content>
     </Container>
   );
