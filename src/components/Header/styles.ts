@@ -10,6 +10,7 @@ export const Container = styled.header`
   height: 8rem;
   display: grid;
   place-items: center;
+  border-bottom: 1px solid rgba(0,0,0,.3);
 
   h1 {
     font-size: 3.2rem;

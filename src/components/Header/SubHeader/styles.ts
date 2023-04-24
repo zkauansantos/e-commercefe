@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
+  border-bottom: 1px solid rgba(0,0,0, 0.4);
 
   p {
     text-transform: uppercase;

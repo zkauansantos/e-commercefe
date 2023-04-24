@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom';
+import Disclaimer from '../Disclaimer';
 import MenuList from '../MenuList';
-import UserBag from '../UserBag';
+import UserBag from '../UserActions';
+import SubHeader from './SubHeader';
 
 import {
   Container,
@@ -10,21 +13,26 @@ import {
 
 export default function Header() {
   return (
-    <Container>
-      <Content>
+    <>
+      <Disclaimer />
+      <Container>
+        <Content>
 
-        <h1>Logo</h1>
+          <Link to="/"><h1>Logo</h1></Link>
 
-        <MenuRoot>
-          <MenuList />
+          <MenuRoot>
+            <MenuList />
 
-          <div className="view-position">
-            <MenuViewPort />
-          </div>
-        </MenuRoot>
+            <div className="view-position">
+              <MenuViewPort />
+            </div>
+          </MenuRoot>
 
-        <UserBag />
-      </Content>
-    </Container>
+          <UserBag />
+        </Content>
+      </Container>
+      <SubHeader />
+    </>
+
   );
 }

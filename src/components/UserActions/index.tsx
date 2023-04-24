@@ -2,6 +2,7 @@ import * as Popover from '@radix-ui/react-popover';
 
 import { UserCircle, ShoppingBagOpen } from 'phosphor-react';
 
+import { Link } from 'react-router-dom';
 import {
   PopoverContent,
   UserBagContainer,
@@ -9,7 +10,7 @@ import {
   UserTrigger,
 } from './styles';
 
-export default function UserBag() {
+export default function UserActions() {
   return (
     <UserBagContainer>
       <Popover.Root>
@@ -22,8 +23,12 @@ export default function UserBag() {
         <Popover.Portal>
           <PopoverContent>
             <UserLoginPopover>
-              <button type="button"> Entrar</button>
-              <button type="button"> Cadastre-se</button>
+              <Link to="/login">
+                <button type="button"> Entrar</button>
+              </Link>
+              <Link to="/register">
+                <button type="button"> Cadastre-se</button>
+              </Link>
             </UserLoginPopover>
 
             <Popover.Arrow className="arrow" />

@@ -13,6 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   ::-webkit-scrollbar {
     width: 1rem;
   }
