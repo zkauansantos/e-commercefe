@@ -10,7 +10,6 @@ export default function Footer() {
 
         <div className="container">
           <div className="container-categories">
-
             <div className="category">
               <strong>Tênis</strong>
               <ul>

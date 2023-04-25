@@ -5,10 +5,7 @@ import UserBag from '../UserActions';
 import SubHeader from './SubHeader';
 
 import {
-  Container,
-  Content,
-  MenuRoot,
-  MenuViewPort,
+  Container, Content, MenuRoot, MenuViewPort,
 } from './styles';
 
 export default function Header() {
@@ -17,8 +14,9 @@ export default function Header() {
       <Disclaimer />
       <Container>
         <Content>
-
-          <Link to="/"><h1>Logo</h1></Link>
+          <Link to="/">
+            <h1>Logo</h1>
+          </Link>
 
           <MenuRoot>
             <MenuList />
@@ -33,6 +31,5 @@ export default function Header() {
       </Container>
       <SubHeader />
     </>
-
   );
 }

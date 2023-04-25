@@ -28,7 +28,10 @@ export default function Highlights() {
               <Card key={i}>
                 <div className="card">
                   <div>
-                    <img src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000" alt="" />
+                    <img
+                      src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
+                      alt=""
+                    />
                   </div>
 
                   <p>Tênis fila x bolovo 88</p>
@@ -55,7 +58,10 @@ export default function Highlights() {
               <Card key={i}>
                 <div className="card">
                   <div>
-                    <img src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000" alt="" />
+                    <img
+                      src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
+                      alt=""
+                    />
                   </div>
 
                   <p>Tênis fila x bolovo 88</p>
@@ -73,7 +79,6 @@ export default function Highlights() {
             ))}
           </div>
         </ContainerMostPurchased>
-
       </Content>
     </Container>
   );

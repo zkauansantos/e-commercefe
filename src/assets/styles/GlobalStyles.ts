@@ -22,11 +22,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.bgSemiDark};
+    background-color: ${({ theme }) => theme.colors.dark['500']};
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: ${({ theme }) => theme.colors.separator};
+    background-color: ${({ theme }) => theme.colors.light['400']};
   }
 `;

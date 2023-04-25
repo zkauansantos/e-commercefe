@@ -3,7 +3,7 @@ import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { MenuContent, MenuTrigger } from './styles';
 
 interface MenuItemProps {
-  label: string
+  label: string;
 }
 
 export default function MenuItem({ label }: MenuItemProps) {

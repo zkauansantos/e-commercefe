@@ -15,7 +15,7 @@ export const MenuTrigger = styled(NavigationMenu.Trigger)`
   font-weight: 500;
   line-height: 1;
   border-radius: 0.4rem;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.light['200']};
 
   span {
     font-size: 1.6rem;

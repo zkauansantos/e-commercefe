@@ -7,7 +7,7 @@ export const Container = styled.main`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background: ${({ theme }) => theme.colors.bgSemiLight};
+  background: ${({ theme }) => theme.colors.light['300']};
 `;
 
 export const Wrapper = styled.div`
@@ -80,8 +80,8 @@ export const ContainerForm = styled.form`
       }
 
       &:active {
-        color: ${({ theme }) => theme.colors.text};
-        background-color: ${({ theme }) => theme.colors.details};
+        color: ${({ theme }) => theme.colors.light['200']};
+        background-color: ${({ theme }) => theme.colors.blue['700']};
       }
     }
   }
@@ -91,8 +91,7 @@ export const ContainerForm = styled.form`
     font-size: 1.6rem;
 
     a {
-      color: ${({ theme }) => theme.colors.details};
+      color: ${({ theme }) => theme.colors.blue['700']};
     }
   }
-
 `;

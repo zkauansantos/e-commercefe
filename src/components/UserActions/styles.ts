@@ -18,7 +18,7 @@ export const UserBagContainer = styled.div`
     * {
       z-index: 1;
       cursor: pointer;
-      color: ${({ theme }) => theme.colors.bgSemiLight};
+      color: ${({ theme }) => theme.colors.light['300']};
     }
 
     .counter {
@@ -28,8 +28,8 @@ export const UserBagContainer = styled.div`
       height: 1.4rem;
       width: 1.4rem;
       position: absolute;
-      background: ${({ theme }) => theme.colors.details};
-      color: ${({ theme }) => theme.colors.bgSemiDark};
+      background: ${({ theme }) => theme.colors.blue['700']};
+      color: ${({ theme }) => theme.colors.dark['500']};
       border-radius: 50%;
       bottom: -0.3rem;
       z-index: 2;
@@ -49,7 +49,7 @@ export const UserTrigger = styled(Popover.Trigger)`
   align-items: center;
 
   * {
-    color: ${({ theme }) => theme.colors.bgLight};
+    color: ${({ theme }) => theme.colors.light['100']};
   }
 `;
 
@@ -57,7 +57,7 @@ export const UserLoginPopover = styled.div`
   position: absolute;
   top: 2.2rem;
   right: -9rem;
-  background: ${({ theme }) => theme.colors.bgSemiDark};
+  background: ${({ theme }) => theme.colors.dark['500']};
   width: 18rem;
   height: 15rem;
   border-radius: 0.4rem;
@@ -74,14 +74,14 @@ export const UserLoginPopover = styled.div`
     place-items: center;
     min-width: 12rem;
     border-radius: 0.4rem;
-    border: 1px solid ${({ theme }) => theme.colors.separator};
-    color: ${({ theme }) => theme.colors.text};
+    border: 1px solid ${({ theme }) => theme.colors.light['400']};
+    color: ${({ theme }) => theme.colors.light['200']};
     cursor: pointer;
     transition: 0.2s ease-in-out;
 
     &:hover {
-      background: ${({ theme }) => theme.colors.bgSemiLight};
-      color: ${({ theme }) => theme.colors.bgSemiDark}
+      background: ${({ theme }) => theme.colors.light['300']};
+      color: ${({ theme }) => theme.colors.dark['500']};
     }
   }
 `;

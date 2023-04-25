@@ -17,28 +17,52 @@ export default function BrandsCarousel() {
           static
         >
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
           <Brand>
-            <img src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000" alt="adidas" />
+            <img
+              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+              alt="adidas"
+            />
           </Brand>
         </Carousel>
       </Content>

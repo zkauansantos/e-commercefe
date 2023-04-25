@@ -7,7 +7,10 @@ export default function Banner() {
   return (
     <Container>
       <Content>
-        <img src="https://www.artwalk.com.br/arquivos/jordan.png?v=637366559551270000" alt="jordan" />
+        <img
+          src="https://www.artwalk.com.br/arquivos/jordan.png?v=637366559551270000"
+          alt="jordan"
+        />
 
         <h3>Jordan Store</h3>
 
@@ -15,7 +18,9 @@ export default function Banner() {
 
         <Link to="/" className="button">
           <span>Ver mais</span>
-          <span className="arrow"><ArrowRight /></span>
+          <span className="arrow">
+            <ArrowRight />
+          </span>
         </Link>
       </Content>
     </Container>

@@ -6,7 +6,7 @@ import * as animations from '../../assets/styles/animations/menu';
 
 export const Container = styled.header`
   position: relative;
-  background: ${({ theme }) => theme.colors.bgDark};
+  background: ${({ theme }) => theme.colors.dark['600']};
   height: 8rem;
   display: grid;
   place-items: center;

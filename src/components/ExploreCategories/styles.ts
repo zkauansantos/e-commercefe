@@ -5,7 +5,7 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 83rem;
-  background: ${({ theme }) => theme.colors.bgDark};
+  background: ${({ theme }) => theme.colors.dark['600']};
 `;
 
 export const Content = styled.div`
@@ -19,7 +19,7 @@ export const Content = styled.div`
   h3 {
     font-size: 2.8rem;
     font-style: italic;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.light['200']};
     opacity: 0.5;
   }
 `;
@@ -38,13 +38,13 @@ export const Category = styled.div<{ width: string, bg: string }>`
   background-size: cover;
   width: ${({ width }) => width};
   position: relative;
-  color: ${({ theme }) => theme.colors.details};
+  color: ${({ theme }) => theme.colors.blue['700']};
   transition: 0.5s ease-in-out ;
   cursor: pointer;
 
   &:hover {
     transition: background-size 0.5s ease-in;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.light['200']};
     background-size: 120%;
   }
 

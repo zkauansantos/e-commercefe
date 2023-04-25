@@ -8,7 +8,7 @@ export const MenuListStyled = styled(NavigationMenu.List)`
   gap: 2.4rem;
   border-radius: 0.6rem;
   list-style: none;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.light['200']};
 
   button,p {
     all: unset;

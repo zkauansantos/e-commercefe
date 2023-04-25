@@ -16,7 +16,7 @@ export const Content = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.light['200']};
   gap: 2.4rem;
 
   h3 {
@@ -40,8 +40,8 @@ export const Content = styled.div`
     width: 17rem;
     height: 5rem;
     font-size: 1.6rem;
-    background: ${({ theme }) => theme.colors.bgLight};
-    color: ${({ theme }) => theme.colors.details};
+    background: ${({ theme }) => theme.colors.light['100']};
+    color: ${({ theme }) => theme.colors.blue['700']};
     font-weight: bold;
     border-radius: 4px;
 
@@ -50,18 +50,18 @@ export const Content = styled.div`
     }
 
     :hover {
-      background: ${({ theme }) => theme.colors.details};
-      color: ${({ theme }) => theme.colors.text};
+      background: ${({ theme }) => theme.colors.blue['700']};
+      color: ${({ theme }) => theme.colors.light['200']};
 
       .arrow {
-        background: ${({ theme }) => theme.colors.bgLight};
-        color: ${({ theme }) => theme.colors.details};
+        background: ${({ theme }) => theme.colors.light['100']};
+        color: ${({ theme }) => theme.colors.blue['700']};
       }
     }
 
     .arrow {
-      background: ${({ theme }) => theme.colors.details};
-      color: ${({ theme }) => theme.colors.text};
+      background: ${({ theme }) => theme.colors.blue['700']};
+      color: ${({ theme }) => theme.colors.light['200']};
       border-radius: 0px 4px 4px 0px;
       height: 5rem;
       display: flex;

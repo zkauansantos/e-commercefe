@@ -35,8 +35,8 @@ export const Content = styled.div`
         font-size: 1.2rem;
         font-style: italic;
 
-        :nth-child(1){
-          font-weight: bold ;
+        :nth-child(1) {
+          font-weight: bold;
         }
       }
     }

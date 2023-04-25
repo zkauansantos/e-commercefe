@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme.colors.bgSemiDark};
+  background: ${({ theme }) => theme.colors.dark['500']};
   height: 4.8rem;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   p {
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.light['100']};
     margin-left: 1.2rem;
     font-weight: 900;
     font-style: italic;

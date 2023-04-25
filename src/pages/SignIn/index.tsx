@@ -26,7 +26,9 @@ export default function SignIn() {
             </button>
           </div>
 
-          <span>Não tem login ? <Link to="/register">Cadastre-se</Link></span>
+          <span>
+            Não tem login ? <Link to="/register">Cadastre-se</Link>
+          </span>
         </ContainerForm>
       </Wrapper>
     </Container>

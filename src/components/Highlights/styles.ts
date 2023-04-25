@@ -25,7 +25,7 @@ export const ContainerHighlights = styled.div`
   h3 {
     font-size: 1.8rem;
     font-style: italic;
-    color: ${({ theme }) => theme.colors.bgSemiDark};
+    color: ${({ theme }) => theme.colors.dark['500']};
     margin-bottom: 2.4rem;
   }
 `;
@@ -40,7 +40,7 @@ export const Carousel = styled(Flickity)`
   }
 
   .flickity-button {
-    color: ${({ theme }) => theme.colors.details};
+    color: ${({ theme }) => theme.colors.blue['700']};
 
     ::before {
       content: '';
@@ -49,7 +49,7 @@ export const Carousel = styled(Flickity)`
       height: 0.4rem;
       top: 1.8rem;
       border-radius: 5px;
-      background: ${({ theme }) => theme.colors.details};
+      background: ${({ theme }) => theme.colors.blue['700']};
     }
   }
 
@@ -115,8 +115,8 @@ export const Card = styled.div`
         text-transform: uppercase;
         padding: 0.8rem ;
         border: none;
-        background: ${({ theme }) => theme.colors.dark};
-        color: ${({ theme }) => theme.colors.text};
+        background: ${({ theme }) => theme.colors.dark['800']};
+        color: ${({ theme }) => theme.colors.light['200']};
 
         &:hover {
           transform: scale(1.1);
@@ -135,7 +135,7 @@ export const ContainerMostPurchased = styled.div`
 
   h3 {
     font-style: italic;
-    color: ${({ theme }) => theme.colors.bgSemiDark};
+    color: ${({ theme }) => theme.colors.dark['500']};
     margin-bottom: 2.4rem;
     font-size: 1.8rem;
   }

@@ -7,7 +7,7 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   height: 40rem;
-  background: ${({ theme }) => theme.colors.bgLight};
+  background: ${({ theme }) => theme.colors.light['100']};
 `;
 
 export const Content = styled.div`
@@ -36,7 +36,7 @@ export const Carousel = styled(Flickity)`
     width: 1rem;
     height: 1rem;
     opacity: 1;
-    background: ${({ theme }) => theme.colors.bgSemiLight};
+    background: ${({ theme }) => theme.colors.light['300']};
     border: 2px solid ${({ theme }) => theme.colors.dark};
   }
 
@@ -49,7 +49,7 @@ export const Carousel = styled(Flickity)`
       content: '';
       width: 0.8rem;
       height: 1.8rem;
-      border: 2px solid ${({ theme }) => theme.colors.details};
+      border: 2px solid ${({ theme }) => theme.colors.blue['700']};
       position: absolute;
       left: 0.7rem;
       bottom: -0.5rem;
@@ -61,10 +61,10 @@ export const Carousel = styled(Flickity)`
   }
 
   .flickity-button {
-    color: ${({ theme }) => theme.colors.details};
+    color: ${({ theme }) => theme.colors.blue['700']};
     width: 5rem;
     height: 5rem;
-    border: 1px solid ${({ theme }) => theme.colors.separator};
+    border: 1px solid ${({ theme }) => theme.colors.light['400']};
     border-radius: 50%;
 
     svg {
@@ -72,7 +72,7 @@ export const Carousel = styled(Flickity)`
     }
 
     :hover{
-      border-color: ${({ theme }) => theme.colors.details};
+      border-color: ${({ theme }) => theme.colors.blue['700']};
     }
 
     ::before {
@@ -82,7 +82,7 @@ export const Carousel = styled(Flickity)`
       height: 0.3rem;
       top: 2.2rem;
       border-radius: 5px;
-      background: ${({ theme }) => theme.colors.details};
+      background: ${({ theme }) => theme.colors.blue['700']};
     }
   }
 
@@ -115,8 +115,8 @@ export const Brand = styled.div`
   width: 10rem;
   height: 10rem;
   padding: 2rem;
-  background: ${({ theme }) => theme.colors.bgDark};
-  border: 1px solid ${({ theme }) => theme.colors.bgLight};
+  background: ${({ theme }) => theme.colors.dark['600']};
+  border: 1px solid ${({ theme }) => theme.colors.light['100']};
   border-radius: 50%;
   display: flex;
   justify-content: center;

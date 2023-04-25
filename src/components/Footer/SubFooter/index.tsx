@@ -8,18 +8,23 @@ export default function SubFooter() {
           <strong>Grupo OOOO</strong>
 
           <div>
-            <p>©? COPYRIGHT 2023 OOOO FRANQUIAS LTDA. TODOS OS DIREITOS RESERVADOS.</p>
+            <p>
+              ©? COPYRIGHT 2023 OOOO FRANQUIAS LTDA. TODOS OS DIREITOS
+              RESERVADOS.
+            </p>
 
             <p>
-              As fotos aqui veiculadas, logotipo e marca são de propriedade da OOOO.
-              É vetada a sua reprodução, total ou parcial, sem a expressa autorização.
+              As fotos aqui veiculadas, logotipo e marca são de propriedade da
+              OOOO. É vetada a sua reprodução, total ou parcial, sem a expressa
+              autorização.
             </p>
 
             <p>
               Preços e condições de pagamento exclusivos para compras realizadas
-              através do site e suporte. Os estoques são limitados e os valores não
-              se aplicam à nossa rede de lojas físicas podendo  sofrer alterações sem
-              aviso prévio. Em caso de divergência, o preço válido é o do carrinho.
+              através do site e suporte. Os estoques são limitados e os valores
+              não se aplicam à nossa rede de lojas físicas podendo sofrer
+              alterações sem aviso prévio. Em caso de divergência, o preço
+              válido é o do carrinho.
             </p>
           </div>
         </div>
@@ -28,12 +33,42 @@ export default function SubFooter() {
           <strong>Formas de pagamento</strong>
 
           <ul>
-            <li><img src="https://www.artwalk.com.br/arquivos/visa.png?v=637366559847970000" alt="" /></li>
-            <li><img src="https://www.artwalk.com.br/arquivos/hyper.png?v=637366559549400000" alt="" /></li>
-            <li><img src="https://www.artwalk.com.br/arquivos/american-express.png?v=637366559150130000" alt="" /></li>
-            <li><img src="https://www.artwalk.com.br/arquivos/elo.png?v=637366559432800000" alt="" /></li>
-            <li><img src="https://www.artwalk.com.br/arquivos/logo-1.png?v=637366559558370000" alt="" /></li>
-            <li><img src="https://www.artwalk.com.br/arquivos/pixLogoBack.png?v=637474399382630000" alt="" /></li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/visa.png?v=637366559847970000"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/hyper.png?v=637366559549400000"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/american-express.png?v=637366559150130000"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/elo.png?v=637366559432800000"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/logo-1.png?v=637366559558370000"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/pixLogoBack.png?v=637474399382630000"
+                alt=""
+              />
+            </li>
           </ul>
         </div>
 
@@ -41,9 +76,24 @@ export default function SubFooter() {
           <strong>Compra 100% segura</strong>
 
           <ul>
-            <li><img src="https://www.artwalk.com.br/arquivos/shield-1.png?v=637366559764000000" alt="" /></li>
-            <li><img src="https://www.artwalk.com.br/arquivos/shield-2.png?v=637366559765800000" alt="" /></li>
-            <li><img src="https://www.artwalk.com.br/arquivos/shield-3.png?v=637366559767700000" alt="" /></li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/shield-1.png?v=637366559764000000"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/shield-2.png?v=637366559765800000"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.artwalk.com.br/arquivos/shield-3.png?v=637366559767700000"
+                alt=""
+              />
+            </li>
           </ul>
         </div>
 
