@@ -17,6 +17,8 @@ export default function SignIn() {
     handleSubmit,
     errors,
     isLoginPath,
+    isSubmitting,
+    isLoading,
   } = useValidateForm();
 
   const handleSignIn: SubmitHandler<SignInFormData | RegisterFormData> = async (
@@ -24,13 +26,14 @@ export default function SignIn() {
     event,
   ) => {
     event?.preventDefault();
+    return true;
   };
 
   return (
     <Container>
       <Wrapper>
         <ContainerForm onSubmit={handleSubmit(handleSignIn)}>
-          <h1>Entrar</h1>
+          <h1>{isLoginPath ? 'Entrar' : 'Cadastro'}</h1>
 
           {!isLoginPath && (
             <Field error={!!errors.name}>
@@ -57,34 +60,41 @@ export default function SignIn() {
           )}
 
           <div>
-            <button disabled={!errors} type="submit">Login</button>
-            <button type="button">
+            <button type="submit" disabled={isLoading || isSubmitting}>
+              {isLoginPath ? 'Login' : 'Cadastrar'}
+            </button>
+
+            <button type="button" disabled={isLoading || isSubmitting}>
               <GoogleLogo size={22} />
               Entrar com Google
             </button>
 
-            <button type="button">
+            <button type="button" disabled={isLoading || isSubmitting}>
               <FacebookLogo size={22} />
               Entrar com Facebook
             </button>
           </div>
 
-          {isLoginPath && (
-            <p>
-              Não tem login?
-              <Link to="/register">
-                Cadastre-se
-              </Link>
-            </p>
-          )}
+          {!(isSubmitting || isLoading) && (
+            <>
+              {isLoginPath && (
+              <p>
+                Não tem login?
+                <Link to="/register">
+                  Cadastre-se
+                </Link>
+              </p>
+              )}
 
-          {!isLoginPath && (
-            <p>
-              Já possui conta?
-              <Link to="/login">
-                Entrar
-              </Link>
-            </p>
+              {!isLoginPath && (
+              <p>
+                Já possui conta?
+                <Link to="/login">
+                  Entrar
+                </Link>
+              </p>
+              )}
+            </>
           )}
 
         </ContainerForm>

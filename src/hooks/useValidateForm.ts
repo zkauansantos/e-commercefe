@@ -22,7 +22,7 @@ export default function useValidateForm() {
     resolver: yupResolver(schema),
   });
 
-  const { errors } = formState;
+  const { errors, isSubmitting, isLoading } = formState;
 
   useEffect(() => {
     clearErrors();
@@ -34,5 +34,8 @@ export default function useValidateForm() {
     handleSubmit,
     errors,
     isLoginPath,
+    formState,
+    isSubmitting,
+    isLoading,
   };
 }
