@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
     "@radix-ui/react-navigation-menu": "^1.1.2",
     "@radix-ui/react-popover": "^1.0.5",
     "flickity": "2.3.0",
@@ -16,8 +17,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flickity-component": "^4.0.5",
+    "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.9.0",
-    "styled-components": "^5.3.9"
+    "styled-components": "^5.3.9",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@types/flickity": "^2.2.7",

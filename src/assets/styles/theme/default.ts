@@ -16,14 +16,8 @@ export const theme: DefaultTheme = {
     blue: {
       700: '#00ACE6',
     },
-
-    // dark: '#000',
-    // bgDark: '#222',
-    // bgSemiDark: '#2C2C2C',
-    // bgLight: '#FFF',
-    // bgSemiLight: '#E2E2E2',
-    // separator: '#C4C4C4',
-    // details: '#00ACE6',
-    // text: '#F2F2F2',
+    red: {
+      500: '#e6000f',
+    },
   },
 };

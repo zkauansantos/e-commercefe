@@ -31,22 +31,11 @@ export const ContainerForm = styled.form`
   h1 {
     align-self: self-start;
     font-size: 2.4rem;
-    margin-bottom: 2.4rem;
-  }
-
-  input {
-    padding: 1rem;
-    margin-bottom: 1.6rem;
-    font-size: 1.6rem;
-    width: 100%;
-    border-radius: 4px;
-    outline: none;
-    border: 1px solid #ccc;
-    font-style: italic;
+    margin-bottom: 0.8rem;
   }
 
   div {
-    margin-top: 1.6rem;
+    margin-top: 3.2rem;
 
     display: flex;
     flex-direction: column;
@@ -65,18 +54,23 @@ export const ContainerForm = styled.form`
       padding: 1rem 0.8rem;
       font-size: 1.6rem;
       font-weight: bold;
-      border: 1px solid #ccc;
+      border: 1px solid ${({ theme }) => theme.colors.light['400']};
       cursor: pointer;
-      transition: 0.2s ease;
+      transition: 0.3s ease;
 
       &:disabled {
-        background-color: #ccc;
+        background-color: ${({ theme }) => theme.colors.light['400']};
         cursor: not-allowed;
-        color: white;
+        color: ${({ theme }) => theme.colors.light['100']};
+
+        &:hover {
+          background-color: ${({ theme }) => theme.colors.light['400']};
+        }
       }
 
       &:hover {
-        background-color: #ccc;
+        background-color: ${({ theme }) => theme.colors.blue['700']};
+        color: ${({ theme }) => theme.colors.light['200']};;
       }
 
       &:active {
@@ -86,12 +80,42 @@ export const ContainerForm = styled.form`
     }
   }
 
-  span {
+  p {
     margin-top: 1.6rem;
     font-size: 1.6rem;
 
     a {
+      margin-left: 0.4rem;
       color: ${({ theme }) => theme.colors.blue['700']};
+
+      :active {
+        color: ${({ theme }) => theme.colors.dark['800']};
+      }
     }
+  }
+`;
+
+export const Field = styled.label<{ error: boolean }>`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  input {
+    padding: 1rem;
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: ${({ error, theme }) => (error ? `1px solid ${theme.colors.red['500']}` : `1px solid ${theme.colors.light['400']}`)};
+    font-style: italic;
+  }
+
+  span {
+    margin-top: 0.6rem;
+    color: #F00A;
+    font-size: 1.2rem;
+    margin-left: 0.4rem;
   }
 `;
