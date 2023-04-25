@@ -58,13 +58,20 @@ export const ContainerForm = styled.form`
       cursor: pointer;
       transition: 0.3s ease;
 
-      &:disabled {
-        background-color: ${({ theme }) => theme.colors.light['400']};
-        cursor: not-allowed;
+      :first-child {
+        background-color: ${({ theme }) => theme.colors.blue['700']};
         color: ${({ theme }) => theme.colors.light['100']};
+        border: 1px solid ${({ theme }) => theme.colors.light['100']};
 
         &:hover {
-          background-color: ${({ theme }) => theme.colors.light['400']};
+          background-color: ${({ theme }) => theme.colors.blue['700']};
+        }
+
+        &:active {
+          opacity: 1;
+          background-color: ${({ theme }) => theme.colors.light['100']};
+          color: initial;
+          border-color: ${({ theme }) => theme.colors.light['400']};
         }
       }
 
@@ -76,6 +83,16 @@ export const ContainerForm = styled.form`
       &:active {
         color: ${({ theme }) => theme.colors.light['200']};
         background-color: ${({ theme }) => theme.colors.blue['700']};
+      }
+
+      &:disabled {
+        background-color: ${({ theme }) => theme.colors.light['400']};
+        cursor: not-allowed;
+        color: ${({ theme }) => theme.colors.light['100']};
+
+        &:hover {
+          background-color: ${({ theme }) => theme.colors.light['400']};
+        }
       }
     }
   }
@@ -108,8 +125,12 @@ export const Field = styled.label<{ error: boolean }>`
     width: 100%;
     border-radius: 4px;
     outline: none;
-    border: ${({ error, theme }) => (error ? `1px solid ${theme.colors.red['500']}` : `1px solid ${theme.colors.light['400']}`)};
     font-style: italic;
+    border: ${({ error, theme }) => (
+    error
+      ? `1px solid ${theme.colors.red['500']}`
+      : `1px solid ${theme.colors.light['400']}`
+  )};
   }
 
   span {

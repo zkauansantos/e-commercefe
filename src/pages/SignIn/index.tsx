@@ -1,41 +1,30 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { useForm, SubmitHandler, UseFormReturn } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FacebookLogo, GoogleLogo } from 'phosphor-react';
-import { useEffect } from 'react';
+
+import { SubmitHandler } from 'react-hook-form';
+import { RegisterFormData } from '../../types/Form/registerFormData';
+import { SignInFormData } from '../../types/Form/signInFormData';
+import useValidateForm from '../../hooks/useValidateForm';
+
 import {
   Container, ContainerForm, Field, Wrapper,
 } from './styles';
-import { singInFormSchema } from './schemas/signInSchemaYup';
-import { registerUserFormSchema } from './schemas/registerUserSchemaYup';
-import { RegisterFormData } from '../../types/Form/registerFormData';
-import { SignInFormData } from '../../types/Form/signInFormData';
 
 export default function SignIn() {
-  const { pathname } = useLocation();
-  const isLoginPath = pathname === '/login';
-  const schema = isLoginPath ? singInFormSchema : registerUserFormSchema;
-
   const {
     register,
     handleSubmit,
-    formState,
-    clearErrors,
-  }: UseFormReturn<SignInFormData | RegisterFormData> = useForm({
-    resolver: yupResolver(schema),
-  });
+    errors,
+    isLoginPath,
+  } = useValidateForm();
 
-  const { errors } = formState;
-
-  const handleSignIn: SubmitHandler<SignInFormData | RegisterFormData
-  > = async (formData, event) => {
+  const handleSignIn: SubmitHandler<SignInFormData | RegisterFormData> = async (
+    formData,
+    event,
+  ) => {
     event?.preventDefault();
   };
-
-  useEffect(() => {
-    clearErrors();
-  }, [pathname]);
 
   return (
     <Container>
@@ -80,7 +69,7 @@ export default function SignIn() {
             </button>
           </div>
 
-          {pathname === '/login' && (
+          {isLoginPath && (
             <p>
               Não tem login?
               <Link to="/register">
@@ -89,7 +78,7 @@ export default function SignIn() {
             </p>
           )}
 
-          {pathname === '/register' && (
+          {!isLoginPath && (
             <p>
               Já possui conta?
               <Link to="/login">
