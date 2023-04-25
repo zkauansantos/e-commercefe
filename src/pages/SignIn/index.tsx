@@ -35,7 +35,7 @@ export default function SignIn() {
           {!isLoginPath && (
             <Field error={!!errors.name}>
               <input type="text" placeholder="Nome" {...register('name')} />
-              {!!errors.email && <span>{errors.name?.message}</span>}
+              {!!errors.name && <span>{errors.name.message}</span>}
             </Field>
           )}
 
@@ -52,7 +52,7 @@ export default function SignIn() {
           {!isLoginPath && (
             <Field error={!!errors.passwordConfirmation}>
               <input type="password" placeholder="Confirme sua senha" {...register('passwordConfirmation')} />
-              {!!errors.password && <span>{errors.passwordConfirmation?.message}</span>}
+              {!!errors.passwordConfirmation && <span>{errors.passwordConfirmation.message}</span>}
             </Field>
           )}
 

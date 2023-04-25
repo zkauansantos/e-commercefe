@@ -16,6 +16,7 @@ declare module 'styled-components' {
         100: string;
       };
       blue: {
+        900: string;
         700: string;
       };
       red: {

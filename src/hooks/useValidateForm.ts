@@ -17,6 +17,7 @@ export default function useValidateForm() {
     handleSubmit,
     formState,
     clearErrors,
+    reset,
   }: UseFormReturn<SignInFormData | RegisterFormData> = useForm({
     resolver: yupResolver(schema),
   });
@@ -25,6 +26,7 @@ export default function useValidateForm() {
 
   useEffect(() => {
     clearErrors();
+    reset();
   }, [pathname]);
 
   return {

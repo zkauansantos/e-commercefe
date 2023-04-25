@@ -64,7 +64,7 @@ export const ContainerForm = styled.form`
         border: 1px solid ${({ theme }) => theme.colors.light['100']};
 
         &:hover {
-          background-color: ${({ theme }) => theme.colors.blue['700']};
+          background-color:${({ theme }) => theme.colors.blue['900']};
         }
 
         &:active {
