@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 124rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
 export const ContainerForm = styled.form`
