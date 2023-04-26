@@ -19,7 +19,7 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
-  padding: 0px 0.5rem;
+  padding: 0px 0.6rem;
 `;
 
 export const Carousel = styled(Flickity)`
@@ -70,43 +70,4 @@ export const View = styled.div`
   background: url("https://artwalk.vteximg.com.br/arquivos/ids/363730/2656%20-%20AW%20%20BANNER%20-%20DESKTOP%201.png?v=638146633633000000")
     center center no-repeat;
   background-size: cover;
-`;
-
-export const Benefits = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 4.6rem;
-  border-radius: 4px;
-  background: ${({ theme }) => theme.colors.light['300']};
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    padding-left: 2.4rem;
-
-    svg {
-      color: ${({ theme }) => theme.colors.blue['700']};
-      font-size: 2rem;
-    }
-
-    p {
-      opacity: 0.9;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-
-      span {
-        font-weight: bold;
-      }
-    }
-
-    :first-child {
-      border-left: none;
-    }
-
-    border-left: 3px solid ${({ theme }) => theme.colors.light['400']};
-  }
 `;

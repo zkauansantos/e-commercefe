@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Flickity from 'react-flickity-component';
 
 export const Container = styled.section`
-  padding: 6.4rem;
+  padding: 6.4rem 0;
   display: grid;
   place-items: center;
   `;
@@ -71,20 +71,22 @@ export const Carousel = styled(Flickity)`
 `;
 
 export const Card = styled.div`
-  height: 40rem;
-  width: 28rem;
   margin: 0 3rem;
   background: linear-gradient(to bottom, #ffffff, #ffffff, #ccc);
   border-radius: 4px;
+  padding: 2.4rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 
-  .card {
+  div {
+    margin-top: 1.2rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
 
     p {
       margin-bottom: 4rem;
@@ -93,34 +95,29 @@ export const Card = styled.div`
       opacity: 0.9;
     }
 
-    div {
-      display: flex;
-      flex-direction: column;
-
-      span, strong {
-        font-size: 1.6rem;
-      }
+    span, strong {
+      font-size: 1.6rem;
     }
+  }
 
-    .button {
+  a {
+    width: 90%;
+    margin-top: 2.4rem;
+    display: grid;
+    place-items: center;
+
+    button {
+      cursor: pointer;
+      border-radius: 4px;
       width: 100%;
-      margin-top: 2.4rem;
-      display: grid;
-      place-items: center;
+      text-transform: uppercase;
+      padding: 0.8rem ;
+      border: none;
+      background: ${({ theme }) => theme.colors.dark['800']};
+      color: ${({ theme }) => theme.colors.light['200']};
 
-      button {
-        cursor: pointer;
-        border-radius: 4px;
-        width: 75%;
-        text-transform: uppercase;
-        padding: 0.8rem ;
-        border: none;
-        background: ${({ theme }) => theme.colors.dark['800']};
-        color: ${({ theme }) => theme.colors.light['200']};
-
-        &:hover {
-          transform: scale(1.1);
-        }
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }
@@ -131,9 +128,11 @@ export const ContainerMostPurchased = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
   h3 {
+    width: 100%;
+    align-self: self-start;
     font-style: italic;
     color: ${({ theme }) => theme.colors.dark['500']};
     margin-bottom: 2.4rem;

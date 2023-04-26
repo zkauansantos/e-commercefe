@@ -1,4 +1,5 @@
 /* eslint-disable react/no-array-index-key */
+import { Link } from 'react-router-dom';
 import { flickityOptions } from '../../utils/flickityOptions';
 
 import {
@@ -26,25 +27,21 @@ export default function Highlights() {
           >
             {Array.from({ length: 15 }).map((q, i) => (
               <Card key={i}>
-                <div className="card">
-                  <div>
-                    <img
-                      src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
-                      alt=""
-                    />
-                  </div>
+                <img
+                  src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
+                  alt=""
+                />
 
+                <div>
                   <p>Tênis fila x bolovo 88</p>
 
-                  <div>
-                    <span>R$ 599,99</span>
-                    <strong>10 x R$ 59,99</strong>
-                  </div>
-
-                  <div className="button">
-                    <button type="button">Quero!</button>
-                  </div>
+                  <span>R$ 599,99</span>
+                  <strong>10 x R$ 59,99</strong>
                 </div>
+
+                <Link to="/product">
+                  <button type="button">Quero!</button>
+                </Link>
               </Card>
             ))}
           </Carousel>
@@ -56,25 +53,21 @@ export default function Highlights() {
           <div className="list">
             {Array.from({ length: 4 }).map((q, i) => (
               <Card key={i}>
-                <div className="card">
-                  <div>
-                    <img
-                      src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
-                      alt=""
-                    />
-                  </div>
+                <img
+                  src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
+                  alt=""
+                />
 
+                <div>
                   <p>Tênis fila x bolovo 88</p>
 
-                  <div>
-                    <span>R$ 599,99</span>
-                    <strong>10 x R$ 59,99</strong>
-                  </div>
-
-                  <div className="button">
-                    <button type="button">Quero!</button>
-                  </div>
+                  <span>R$ 599,99</span>
+                  <strong>10 x R$ 59,99</strong>
                 </div>
+
+                <Link to="/product">
+                  <button type="button">Quero!</button>
+                </Link>
               </Card>
             ))}
           </div>
