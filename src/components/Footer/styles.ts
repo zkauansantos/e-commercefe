@@ -5,7 +5,6 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 6.4rem;
   background: ${({ theme }) => theme.colors.dark['600']};
 `;
 

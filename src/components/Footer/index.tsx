@@ -1,8 +1,16 @@
 import { FacebookLogo, InstagramLogo } from 'phosphor-react';
+import { useLocation } from 'react-router-dom';
 import { FooterContainer, Content } from './styles';
 import SubFooter from './SubFooter';
 
 export default function Footer() {
+  const { pathname } = useLocation();
+  const isLoginPath = pathname === '/login';
+
+  if (isLoginPath) {
+    return null;
+  }
+
   return (
     <FooterContainer>
       <Content>

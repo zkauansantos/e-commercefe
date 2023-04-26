@@ -10,6 +10,7 @@ declare module 'styled-components' {
         500: string;
       };
       light: {
+        500: string
         400: string;
         300: string;
         200: string;

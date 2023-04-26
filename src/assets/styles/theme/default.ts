@@ -8,6 +8,7 @@ export const theme: DefaultTheme = {
       500: '#2C2C2C',
     },
     light: {
+      500: '#999999',
       400: '#C4C4C4',
       300: '#E2E2E2',
       200: '#F2F2F2',

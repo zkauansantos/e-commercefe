@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Disclaimer from '../Disclaimer';
 import MenuList from '../MenuList';
-import UserBag from '../UserActions';
+import UserActions from '../UserActions';
 import SubHeader from './SubHeader';
 
 import {
@@ -26,7 +26,7 @@ export default function Header() {
             </div>
           </MenuRoot>
 
-          <UserBag />
+          <UserActions />
         </Content>
       </Container>
       <SubHeader />

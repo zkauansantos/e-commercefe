@@ -17,6 +17,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding-bottom: 6.4rem;
 
   h3 {
     font-size: 2.4rem;
