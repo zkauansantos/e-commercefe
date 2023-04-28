@@ -44,6 +44,7 @@ export const Content = styled.div`
 
   .payment-methods {
     strong {
+      font-size: 1.4rem;
       margin-left: 2.4rem;
     }
 

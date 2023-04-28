@@ -29,4 +29,13 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 4px;
     background-color: ${({ theme }) => theme.colors.light['400']};
   }
+
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
 `;

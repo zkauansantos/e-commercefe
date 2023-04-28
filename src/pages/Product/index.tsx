@@ -1,17 +1,31 @@
+import { useState } from 'react';
+
 import {
-  CoatHanger, Ruler, ShoppingBagOpen, Truck,
+  ArrowRight,
+  CoatHanger,
+  Ruler,
+  ShoppingBagOpen,
+  Truck,
 } from 'phosphor-react';
+
 import Benefits from '../../components/Benefits';
+
+import formatCEP from '../../utils/formatCEP';
+
 import { Container, Content } from './styles';
 
 export default function Product() {
+  const [CEP, setCEP] = useState('');
+
   return (
     <Container as="main">
       <Content>
         <Benefits />
 
         <div className="container">
-          <div className="img" />
+          <div className="container-image">
+            <div className="img" />
+          </div>
 
           <div className="details">
             <div className="product-information">
@@ -72,7 +86,16 @@ export default function Product() {
               </div>
 
               <div>
-                <input type="text" placeholder="Digite seu CEP" />
+                <input
+                  type="text"
+                  placeholder="Digite seu CEP"
+                  value={CEP}
+                  onChange={(e) => setCEP(formatCEP(e.target.value))}
+                  maxLength={9}
+                />
+                <span className="arrow">
+                  <ArrowRight size={28} />
+                </span>
               </div>
             </div>
           </div>
