@@ -33,16 +33,17 @@ export const Content = styled.div`
       }
     }
 
-      .details {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 2.4rem 4.8rem 4.8rem 4.8rem;
-        max-width: 50rem;
-        background-color: ${({ theme }) => theme.colors.light['100']};
+    .details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 2.4rem 4.8rem 4.8rem 4.8rem;
+      max-width: 50rem;
+      position: relative;
+      background-color: ${({ theme }) => theme.colors.light['100']};
 
-        .product-information {
+      .product-information {
           width: 100%;
           display: flex;
           flex-direction: column;
@@ -60,9 +61,9 @@ export const Content = styled.div`
             width: 100%;
             text-align: end;
           }
-        }
+      }
 
-        .price {
+      .price {
           margin-top: 2.4rem;
           width: 100%;
           justify-content: space-between;
@@ -93,9 +94,9 @@ export const Content = styled.div`
               }
             }
           }
-        }
+      }
 
-        .colors-product{
+      .colors-product{
           margin-top: 2.4rem;
 
           span {
@@ -127,9 +128,9 @@ export const Content = styled.div`
               background: ${({ theme }) => theme.colors.blue['700']};
             }
           }
-        }
+      }
 
-        .sizes {
+      .sizes {
           width: 100%;
           display: flex;
           flex-direction: column;
@@ -162,9 +163,9 @@ export const Content = styled.div`
               }
             }
           }
-        }
+      }
 
-        .find-you-size {
+      .find-you-size {
           margin-top: 2.4rem;
           width: 100%;
           display: flex;
@@ -191,9 +192,9 @@ export const Content = styled.div`
               transform: scale(1.05);
             }
           }
-        }
+      }
 
-        button {
+      button {
           margin-top: 2.4rem;
           width: 100%;
           display: flex;
@@ -223,9 +224,9 @@ export const Content = styled.div`
            color: ${({ theme }) => theme.colors.light['200']};
             background-color: ${({ theme }) => theme.colors.blue['700']};
           }
-        }
+      }
 
-        .benefits {
+      .benefits {
           margin-top: 2.4rem;
           width: 100%;
           display: flex;
@@ -242,44 +243,53 @@ export const Content = styled.div`
             justify-content: center;
             gap: 0.8rem;
           }
-        }
-      }
-
-      .cep {
-        width: 100%;
-        margin-top: 4.8rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          strong {
-            font-size: 1.2rem;
-            margin-left: 0.8rem;
-          }
-
-          input {
-            padding: 1.3rem;
-            border: 1px solid ${({ theme }) => theme.colors.light['400']};
-            outline: none;
-            border-radius: 4px 0px 0px 4px;
-          }
-
-          .arrow {
-            padding: 1em;
-            background: ${({ theme }) => theme.colors.blue['700']};
-            border-radius: 0px 4px 4px 0px;
-            cursor: pointer;
-
-            svg {
-              color: ${({ theme }) => theme.colors.light['100']};
-            }
-          }
-        }
       }
     }
+
+    .delivery {
+      width: 100%;
+      margin-top: 4.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        strong {
+          font-size: 1.2rem;
+          margin-left: 0.8rem;
+        }
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid ${({ theme }) => theme.colors.light['400']};
+        border-radius: 4px;
+
+        input {
+          outline: none;
+          padding: 0.8rem;
+          border: none;
+        }
+
+        button {
+          border-radius: initial;
+          margin-top: initial;
+          padding: 0.8rem;
+        }
+      }
+
+      .error {
+        position: absolute;
+        color: #F00A;
+        bottom: 30px;
+        font-size: 1.2rem;
+      }
+    }
+  }
 `;

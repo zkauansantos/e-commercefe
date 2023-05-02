@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useState } from 'react';
+import { SubmitHandler } from 'react-hook-form';
 
 import {
   ArrowRight,
@@ -13,9 +15,39 @@ import Benefits from '../../components/Benefits';
 import formatCEP from '../../utils/formatCEP';
 
 import { Container, Content } from './styles';
+import useValidateForm from '../../hooks/useValidateForm';
+import { deliveryCEPSchemaYup } from './schemas/deliveryCEPSchemaYup';
+import useValueDelivery from '../../services/hooks/useValueDelivery';
+
+type CEPInputData = {
+  cep: string;
+};
 
 export default function Product() {
-  const [CEP, setCEP] = useState('');
+  const calculate = useValueDelivery();
+  const {
+    errors,
+    handleSubmit,
+    register,
+    setValue,
+  } = useValidateForm<CEPInputData>(deliveryCEPSchemaYup);
+  const [valueDeliveryServices, setValueDeliveryServices] = useState<any>([]);
+  const valueDeliveryPACandSEDEX = valueDeliveryServices.filter((service) => (
+    service.name === 'PAC' || service.name === 'SEDEX'
+  ));
+
+  const handleCalcDelivery: SubmitHandler<CEPInputData> = async (inputValue, event) => {
+    event?.preventDefault();
+    const { cep } = inputValue;
+
+    if (!cep) {
+      return 'O cep é obrigatório';
+    }
+
+    const responseValuesDelivery = await calculate.mutateAsync(cep);
+
+    setValueDeliveryServices([...responseValuesDelivery]);
+  };
 
   return (
     <Container as="main">
@@ -80,23 +112,39 @@ export default function Product() {
               </div>
             </div>
 
-            <div className="cep">
+            <div className="delivery">
               <div>
                 <Truck size={28} /> <strong>Calcular frete</strong>
               </div>
 
-              <div>
-                <input
-                  type="text"
-                  placeholder="Digite seu CEP"
-                  value={CEP}
-                  onChange={(e) => setCEP(formatCEP(e.target.value))}
-                  maxLength={9}
-                />
-                <span className="arrow">
-                  <ArrowRight size={28} />
-                </span>
+              <form onSubmit={handleSubmit(handleCalcDelivery)}>
+                <label htmlFor="cep">
+                  <input
+                    id="cep"
+                    type="text"
+                    placeholder="Digite seu CEP"
+                    maxLength={9}
+                    {...register('cep')}
+                    onChange={(event) => setValue('cep', formatCEP(event.target.value))}
+                  />
+
+                  <button type="submit">
+                    <ArrowRight size={28} />
+                  </button>
+                </label>
+
+                {!!errors.cep && <span className="error">{errors.cep.message}</span>}
+              </form>
+            </div>
+
+            <div>{valueDeliveryPACandSEDEX.map((service) => (
+              <div key={Math.random()}>
+                <img src={service.company.picture} alt="" />
+                <strong>{service?.name}</strong>
+                <span> até {service.custom_delivery_time} dias úteis</span>
+                <strong>{service.currency}{service.price}</strong>
               </div>
+            ))}
             </div>
           </div>
 
