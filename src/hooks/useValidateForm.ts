@@ -2,15 +2,10 @@ import { UseFormReturn, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import { singInFormSchema } from '../pages/SignIn/schemas/signInSchemaYup';
-import { registerUserFormSchema } from '../pages/SignIn/schemas/registerUserSchemaYup';
-import { SignInFormData } from '../types/Form/signInFormData';
-import { RegisterFormData } from '../types/Form/registerFormData';
+import { FieldValues } from 'react-hook-form/dist/types';
 
-export default function useValidateForm() {
+export default function useValidateForm<T extends FieldValues>(schema: any) {
   const { pathname } = useLocation();
-  const isLoginPath = pathname === '/login';
-  const schema = isLoginPath ? singInFormSchema : registerUserFormSchema;
 
   const {
     register,
@@ -18,7 +13,8 @@ export default function useValidateForm() {
     formState,
     clearErrors,
     reset,
-  }: UseFormReturn<SignInFormData | RegisterFormData> = useForm({
+    setValue,
+  }: UseFormReturn<T> = useForm({
     resolver: yupResolver(schema),
   });
 
@@ -33,9 +29,9 @@ export default function useValidateForm() {
     register,
     handleSubmit,
     errors,
-    isLoginPath,
     formState,
     isSubmitting,
     isLoading,
+    setValue,
   };
 }

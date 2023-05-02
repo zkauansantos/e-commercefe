@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FacebookLogo, GoogleLogo } from 'phosphor-react';
 
 import { SubmitHandler } from 'react-hook-form';
@@ -10,16 +10,21 @@ import useValidateForm from '../../hooks/useValidateForm';
 import {
   Container, ContainerForm, Field, Wrapper,
 } from './styles';
+import { singInFormSchema } from './schemas/signInSchemaYup';
+import { registerUserFormSchema } from './schemas/registerUserSchemaYup';
 
 export default function SignIn() {
+  const { pathname } = useLocation();
+  const isLoginPath = pathname === '/login';
+  const schema = isLoginPath ? singInFormSchema : registerUserFormSchema;
+
   const {
     register,
     handleSubmit,
     errors,
-    isLoginPath,
     isSubmitting,
     isLoading,
-  } = useValidateForm();
+  } = useValidateForm<SignInFormData | RegisterFormData>(schema);
 
   const handleSignIn: SubmitHandler<SignInFormData | RegisterFormData> = async (
     formData,
