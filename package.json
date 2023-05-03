@@ -12,6 +12,7 @@
     "@hookform/resolvers": "^3.1.0",
     "@radix-ui/react-navigation-menu": "^1.1.2",
     "@radix-ui/react-popover": "^1.0.5",
+    "@radix-ui/react-tabs": "1.0.3",
     "axios": "^1.4.0",
     "dotenv": "^16.0.3",
     "flickity": "2.3.0",
@@ -21,8 +22,8 @@
     "react-flickity-component": "^4.0.5",
     "react-hook-form": "^7.43.9",
     "react-query": "^3.39.3",
-    "react-router-dom": "^6.9.0",
-    "styled-components": "^5.3.9",
+    "react-router-dom": "^6.11.0",
+    "styled-components": "^5.3.10",
     "yup": "^1.1.1"
   },
   "devDependencies": {
