@@ -34,13 +34,12 @@ async function getPricesDelivery(cep: string): Promise<any> {
       },
     },
   );
-  console.log(response.data);
 
   return response.data;
 }
 
 export default function useValueDelivery() {
   return useMutation({
-    mutationFn: (cep: string) => getPricesDelivery(cep),
+    mutationFn: getPricesDelivery,
   });
 }
