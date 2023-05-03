@@ -3,8 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { FacebookLogo, GoogleLogo } from 'phosphor-react';
 
 import { SubmitHandler } from 'react-hook-form';
-import { RegisterFormData } from '../../types/Form/registerFormData';
-import { SignInFormData } from '../../types/Form/signInFormData';
+import { RegisterFormData } from '../../types/Forms/registerFormData';
+import { SignInFormData } from '../../types/Forms/signInFormData';
 import useValidateForm from '../../hooks/useValidateForm';
 
 import {
