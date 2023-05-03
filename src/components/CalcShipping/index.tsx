@@ -12,10 +12,14 @@ import { CEPSchemaYup } from '../../pages/Product/schemas/CEPSchemaYup';
 import { CEPInputData } from '../../types/Forms/CEPInputData';
 import { ShippingMethod } from '../../types/ShippingMethod';
 
-import { Container, ContainerForm, Form } from './styles';
+import {
+  Container, ContainerForm, Form,
+} from './styles';
+import { InputErrorSpan } from '../InputErrorSpan';
+import ShippingMethods from './ShippingMethods';
 
 export default function CalcShipping() {
-  const calculate = useValueShipping();
+  const { mutateAsync, isLoading } = useValueShipping();
   const {
     errors,
     handleSubmit,
@@ -23,9 +27,6 @@ export default function CalcShipping() {
     setValue,
   } = useValidateForm<CEPInputData>(CEPSchemaYup);
   const [valuesShippingMethods, setValuesShippingMethods] = useState<ShippingMethod[]>([]);
-  const valuesShippingPACandSEDEX = valuesShippingMethods.filter(({ name }) => (
-    name === 'PAC' || name === 'SEDEX'
-  ));
 
   const handleCalcShipping: SubmitHandler<CEPInputData> = async ({ cep }, event) => {
     event?.preventDefault();
@@ -34,45 +35,41 @@ export default function CalcShipping() {
       return 'O cep é obrigatório';
     }
 
-    const responseValuesShipping = await calculate.mutateAsync(cep);
+    const responseValuesShipping = await mutateAsync(cep);
 
     setValuesShippingMethods([...responseValuesShipping]);
   };
 
   return (
     <Container>
-      <ContainerForm>
-        <strong><Truck size={28} /> Calcular frete </strong>
+      <div className="centralizer">
+        <ContainerForm>
+          <strong><Truck size={28} /> Calcular frete </strong>
 
-        <Form onSubmit={handleSubmit(handleCalcShipping)}>
-          <label htmlFor="cep">
-            <input
-              id="cep"
-              type="text"
-              placeholder="Digite seu CEP"
-              maxLength={9}
-              {...register('cep')}
-              onChange={(event) => setValue('cep', formatCEP(event.target.value))}
-            />
+          <Form
+            isError={!!errors.cep}
+            onSubmit={handleSubmit(handleCalcShipping)}
+          >
+            <label htmlFor="cep">
+              <input
+                id="cep"
+                type="text"
+                placeholder="Digite seu CEP"
+                maxLength={9}
+                {...register('cep')}
+                onChange={(event) => setValue('cep', formatCEP(event.target.value))}
+              />
 
-            <button type="submit">
-              <ArrowRight size={28} />
-            </button>
-          </label>
+              <button type="submit">
+                <ArrowRight size={28} />
+              </button>
+            </label>
 
-          {!!errors.cep && <span className="error">{errors.cep.message}</span>}
-        </Form>
-      </ContainerForm>
+            {!!errors.cep && <InputErrorSpan>{errors.cep.message}</InputErrorSpan>}
+          </Form>
+        </ContainerForm>
 
-      <div>
-        {valuesShippingPACandSEDEX.map((service) => (
-          <div key={Math.random()}>
-            <img src={service.company.picture} alt="" width="30" />
-            <strong>{service.name}</strong>
-            <span> até {service.custom_delivery_time} dias úteis</span>
-            <strong>{service.currency}{service.price}</strong>
-          </div>
-        ))}
+        <ShippingMethods isLoading={isLoading} shippingMethods={valuesShippingMethods} />
       </div>
     </Container>
   );

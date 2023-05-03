@@ -7,13 +7,19 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 4.6rem;
+
+  .centralizer {
+    padding-right: 4.6rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 43rem;
+  }
 `;
 
 export const ContainerForm = styled.div`
-  padding: 0 4.6rem;
   display: flex;
-  width: 100%;
-  justify-content: flex-end;
   gap: 4.6rem;
   align-items: center;
 
@@ -26,12 +32,14 @@ export const ContainerForm = styled.div`
   }
 `;
 
-export const Form = styled.form`
+export const Form = styled.form<{ isError: boolean }>`
+  position: relative;
+
   label {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid ${({ theme }) => theme.colors.light['400']};
+    border: 1px solid ${({ isError, theme }) => (!isError ? theme.colors.light['400'] : theme.colors.red['500'])};
     border-radius: 4px;
     overflow: hidden;
 
@@ -65,8 +73,8 @@ export const Form = styled.form`
     }
   }
 
-  .error {
-    color: #f00a;
-    font-size: 1.2rem;
+  span {
+    position: absolute;
+    bottom: -2rem;
   }
 `;
