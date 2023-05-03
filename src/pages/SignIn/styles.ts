@@ -132,11 +132,4 @@ export const Field = styled.label<{ error: boolean }>`
       : `1px solid ${theme.colors.light['400']}`
   )};
   }
-
-  span {
-    margin-top: 0.6rem;
-    color: #F00A;
-    font-size: 1.2rem;
-    margin-left: 0.4rem;
-  }
 `;

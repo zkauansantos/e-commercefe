@@ -14,7 +14,7 @@ import { ShippingMethod } from '../../types/ShippingMethod';
 
 import { Container, ContainerForm, Form } from './styles';
 
-export default function Shipping() {
+export default function CalcShipping() {
   const calculate = useValueShipping();
   const {
     errors,

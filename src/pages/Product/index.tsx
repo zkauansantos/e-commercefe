@@ -3,7 +3,7 @@ import Benefits from '../../components/Benefits';
 import { Container, Content, Wrapper } from './styles';
 
 import ProductWidget from '../../components/ProductWidget';
-import Shipping from '../../components/Shipping';
+import CalcShipping from '../../components/CalcShipping';
 
 export default function Product() {
   return (
@@ -19,7 +19,7 @@ export default function Product() {
           <ProductWidget />
         </Wrapper>
 
-        <Shipping />
+        <CalcShipping />
       </Content>
     </Container>
   );

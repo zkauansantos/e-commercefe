@@ -12,6 +12,7 @@ import {
 } from './styles';
 import { singInFormSchema } from './schemas/signInSchemaYup';
 import { registerUserFormSchema } from './schemas/registerUserSchemaYup';
+import { InputErrorSpan } from '../../components/InputErrorSpan';
 
 export default function SignIn() {
   const { pathname } = useLocation();
@@ -43,24 +44,26 @@ export default function SignIn() {
           {!isLoginPath && (
             <Field error={!!errors.name}>
               <input type="text" placeholder="Nome" {...register('name')} />
-              {!!errors.name && <span>{errors.name.message}</span>}
+              {!!errors.name && <InputErrorSpan>{errors.name.message}</InputErrorSpan>}
             </Field>
           )}
 
           <Field error={!!errors.email}>
             <input type="email" placeholder="E-mail" {...register('email')} />
-            {!!errors.email && <span>{errors.email.message}</span>}
+            {!!errors.email && <InputErrorSpan>{errors.email.message}</InputErrorSpan>}
           </Field>
 
           <Field error={!!errors.password}>
             <input type="password" placeholder="Senha" {...register('password')} />
-            {!!errors.password && <span>{errors.password.message}</span>}
+            {!!errors.password && <InputErrorSpan>{errors.password.message}</InputErrorSpan>}
           </Field>
 
           {!isLoginPath && (
             <Field error={!!errors.passwordConfirmation}>
               <input type="password" placeholder="Confirme sua senha" {...register('passwordConfirmation')} />
-              {!!errors.passwordConfirmation && <span>{errors.passwordConfirmation.message}</span>}
+              {!!errors.passwordConfirmation && (
+                <InputErrorSpan>{errors.passwordConfirmation.message}</InputErrorSpan>
+              )}
             </Field>
           )}
 
