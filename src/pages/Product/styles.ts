@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   display: grid;
   place-items: center;
-  padding: 3.2rem 0 6.4rem 0;
+  padding-top: 3.2rem;
 `;
 
 export const Content = styled.div`

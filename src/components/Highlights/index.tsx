@@ -11,12 +11,17 @@ import {
   ContainerMostPurchased,
 } from './styles';
 
-export default function Highlights() {
+interface HighlightsProps {
+  visibleMostPurchased: boolean;
+  titleCarousel: string;
+}
+
+export default function Highlights({ visibleMostPurchased, titleCarousel }: HighlightsProps) {
   return (
     <Container>
       <Content>
         <ContainerHighlights>
-          <h3>Destaques da semana</h3>
+          <h3>{titleCarousel}</h3>
 
           <Carousel
             elementType="div"
@@ -47,6 +52,7 @@ export default function Highlights() {
           </Carousel>
         </ContainerHighlights>
 
+        {!!visibleMostPurchased && (
         <ContainerMostPurchased>
           <h3>Mais comprados</h3>
 
@@ -72,6 +78,7 @@ export default function Highlights() {
             ))}
           </div>
         </ContainerMostPurchased>
+        )}
       </Content>
     </Container>
   );

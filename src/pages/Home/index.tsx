@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Highlights />
+      <Highlights visibleMostPurchased titleCarousel="Destaques da Semana" />
       <ExploreCategories />
       <Banner />
       <BrandsCarousel />
