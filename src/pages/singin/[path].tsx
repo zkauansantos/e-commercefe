@@ -1,22 +1,22 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Link, useLocation } from 'react-router-dom';
-import { FacebookLogo, GoogleLogo } from 'phosphor-react';
 
-import { SubmitHandler } from 'react-hook-form';
-import { RegisterFormData } from '../../types/Forms/registerFormData';
-import { SignInFormData } from '../../types/Forms/signInFormData';
-import useValidateForm from '../../hooks/useValidateForm';
-
+import { InputErrorSpan } from '@/components/InputErrorSpan';
+import useValidateForm from '@/hooks/useValidateForm';
+import { registerUserFormSchema, singInFormSchema } from '@/schemas/pages/SignIn';
 import {
   Container, ContainerForm, Field, Wrapper,
-} from './styles';
-import { singInFormSchema } from './schemas/signInSchemaYup';
-import { registerUserFormSchema } from './schemas/registerUserSchemaYup';
-import { InputErrorSpan } from '../../components/InputErrorSpan';
+} from '@/styles/pages/SignIn';
+import { RegisterFormData } from '@/types/Forms/registerFormData';
+import { SignInFormData } from '@/types/Forms/signInFormData';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FacebookLogo, GoogleLogo } from 'phosphor-react';
+import { SubmitHandler } from 'react-hook-form';
 
 export default function SignIn() {
-  const { pathname } = useLocation();
-  const isLoginPath = pathname === '/login';
+  const { query } = useRouter();
+  const { path } = query;
+  const isLoginPath = path === 'login';
   const schema = isLoginPath ? singInFormSchema : registerUserFormSchema;
 
   const {
@@ -88,7 +88,7 @@ export default function SignIn() {
               {isLoginPath && (
               <p>
                 Não tem login?
-                <Link to="/register">
+                <Link href="/singin/register">
                   Cadastre-se
                 </Link>
               </p>
@@ -97,7 +97,7 @@ export default function SignIn() {
               {!isLoginPath && (
               <p>
                 Já possui conta?
-                <Link to="/login">
+                <Link href="/singin/login">
                   Entrar
                 </Link>
               </p>

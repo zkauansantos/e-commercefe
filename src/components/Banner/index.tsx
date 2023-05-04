@@ -1,5 +1,5 @@
 import { ArrowRight } from 'phosphor-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import { Container, Content } from './styles';
 
@@ -16,7 +16,7 @@ export default function Banner() {
 
         <p>Fique por dentro dos lançamentos!</p>
 
-        <Link to="/" className="button">
+        <Link href="/" className="button">
           <span>Ver mais</span>
           <span className="arrow">
             <ArrowRight />

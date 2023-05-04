@@ -1,9 +1,9 @@
 import { Storefront, ShoppingCart } from 'phosphor-react';
-import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { Container } from './styles';
 
 export default function SubHeader() {
-  const { pathname } = useLocation();
+  const { pathname } = useRouter();
 
   if (pathname === '/login' || pathname === '/register') {
     return null;

@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import * as Tabs from '@radix-ui/react-tabs';
 
-import Benefits from '../../components/Benefits';
-
 import {
   Container,
   ContainerDescriptionProduct,
@@ -10,11 +8,12 @@ import {
   ContentDescription,
   ShareContainer,
   Wrapper,
-} from './styles';
+} from '../styles/pages/Product';
 
-import ProductWidget from '../../components/ProductWidget';
-import CalcShipping from '../../components/CalcShipping';
-import Highlights from '../../components/Highlights';
+import Benefits from '../components/Benefits';
+import ProductWidget from '../components/ProductWidget';
+import CalcShipping from '../components/CalcShipping';
+import Highlights from '../components/Highlights';
 
 export default function Product() {
   return (

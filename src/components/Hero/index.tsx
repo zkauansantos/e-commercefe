@@ -1,5 +1,4 @@
 import { flickityOptions } from '../../utils/flickityOptions';
-import 'flickity/css/flickity.css';
 
 import Benefits from '../Benefits';
 

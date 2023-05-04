@@ -1,20 +1,17 @@
 /* eslint-disable consistent-return */
 /* eslint-disable react/jsx-props-no-spreading */
+
 import { useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
+
+import useValidateForm from '@/hooks/useValidateForm';
+import { CEPSchemaYup } from '@/schemas/pages/Product';
+import useValueShipping from '@/services/hooks/useValueShipping';
+import { CEPInputData } from '@/types/Forms/CEPInputData';
+import { ShippingMethod } from '@/types/ShippingMethod';
 import { ArrowRight, Truck } from 'phosphor-react';
-
-import useValidateForm from '../../hooks/useValidateForm';
-import useValueShipping from '../../services/hooks/useValueDelivery';
-
-import formatCEP from '../../utils/formatCEP';
-import { CEPSchemaYup } from '../../pages/Product/schemas/CEPSchemaYup';
-import { CEPInputData } from '../../types/Forms/CEPInputData';
-import { ShippingMethod } from '../../types/ShippingMethod';
-
-import {
-  Container, ContainerForm, Form,
-} from './styles';
+import formatCEP from '@/utils/formatCEP';
+import { Container, ContainerForm, Form } from './styles';
 import { InputErrorSpan } from '../InputErrorSpan';
 import ShippingMethods from './ShippingMethods';
 
@@ -35,9 +32,12 @@ export default function CalcShipping() {
       return 'O cep é obrigatório';
     }
 
-    const responseValuesShipping = await mutateAsync(cep);
-
-    setValuesShippingMethods([...responseValuesShipping]);
+    try {
+      const responseValuesShipping = await mutateAsync(cep);
+      setValuesShippingMethods([...responseValuesShipping]);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

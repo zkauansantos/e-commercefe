@@ -1,11 +1,12 @@
 import { UseFormReturn, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { FieldValues } from 'react-hook-form/dist/types';
+import { useRouter } from 'next/router';
 
 export default function useValidateForm<T extends FieldValues>(schema: any) {
-  const { pathname } = useLocation();
+  const { query } = useRouter();
+  const { path } = query;
 
   const {
     register,
@@ -23,7 +24,7 @@ export default function useValidateForm<T extends FieldValues>(schema: any) {
   useEffect(() => {
     clearErrors();
     reset();
-  }, [pathname]);
+  }, [path]);
 
   return {
     register,

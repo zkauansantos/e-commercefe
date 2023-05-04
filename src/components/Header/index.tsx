@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Disclaimer from '../Disclaimer';
 import MenuList from '../MenuList';
 import UserActions from '../UserActions';
@@ -14,7 +14,7 @@ export default function Header() {
       <Disclaimer />
       <Container>
         <Content>
-          <Link to="/">
+          <Link href="/">
             <h1>Logo</h1>
           </Link>
 

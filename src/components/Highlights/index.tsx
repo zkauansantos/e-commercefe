@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { flickityOptions } from '../../utils/flickityOptions';
 
 import {
@@ -44,7 +44,7 @@ export default function Highlights({ visibleMostPurchased, titleCarousel }: High
                   <strong>10 x R$ 59,99</strong>
                 </div>
 
-                <Link to="/product">
+                <Link href="/product">
                   <button type="button">Quero!</button>
                 </Link>
               </Card>
@@ -71,7 +71,7 @@ export default function Highlights({ visibleMostPurchased, titleCarousel }: High
                   <strong>10 x R$ 59,99</strong>
                 </div>
 
-                <Link to="/product">
+                <Link href="/product">
                   <button type="button">Quero!</button>
                 </Link>
               </Card>

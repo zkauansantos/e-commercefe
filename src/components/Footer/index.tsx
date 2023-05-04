@@ -1,10 +1,10 @@
 import { FacebookLogo, InstagramLogo } from 'phosphor-react';
-import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { FooterContainer, Content } from './styles';
 import SubFooter from './SubFooter';
 
 export default function Footer() {
-  const { pathname } = useLocation();
+  const { pathname } = useRouter();
   const isLoginPath = pathname === '/login';
 
   if (isLoginPath) {

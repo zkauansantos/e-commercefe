@@ -38,7 +38,7 @@ async function getPricesDelivery(cep: string): Promise<any> {
   return response.data;
 }
 
-export default function useValueDelivery() {
+export default function useValueShipping() {
   return useMutation({
     mutationFn: getPricesDelivery,
   });
