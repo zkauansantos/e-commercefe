@@ -44,9 +44,6 @@ export const ContainerDescriptionProduct = styled.section`
 export const ContentDescription = styled.div`
   width: 100%;
   max-width: 124rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   button,
   fieldset,
@@ -57,43 +54,97 @@ export const ContentDescription = styled.div`
   .TabsRoot {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 10px var(--blackA4);
   }
+
   .TabsList {
     flex-shrink: 0;
     display: flex;
-    border-bottom: 1px solid var(--mauve6);
   }
+
   .TabsTrigger {
-    font-family: inherit;
-    background-color: white;
-    padding: 0 20px;
-    height: 45px;
-    flex: 1;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
-    line-height: 1;
-    color: var(--mauve11);
-    user-select: none;
+    font-size: 2rem;
+    font-style: italic;
+    background: ${({ theme }) => theme.colors.dark['600']};
+    color: ${({ theme }) => theme.colors.light['100']};
+    font-weight: bold;
+    margin-bottom: 2rem;
   }
 
-  .TabsTrigger:focus {
-    position: relative;
-    box-shadow: 0 0 0 2px black;
+  .TabsTrigger[data-state='active'] {
+    color: ${({ theme }) => theme.colors.blue['700']};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.blue['700']};
   }
 
   .TabsContent {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: white;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
     outline: none;
-  }
-  .TabsContent:focus {
-    box-shadow: 0 0 0 2px black;
+    background: ${({ theme }) => theme.colors.dark['600']};
+    color: ${({ theme }) => theme.colors.light['100']};
+    font-size: 1.6rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3.2rem;
+    margin-left: 2rem;
+    padding-bottom: 2rem;
+
+    .description {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      max-width: 65%;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.4rem;
+      width: 100%;
+
+      strong {
+        font-size: 2rem;
+        margin-bottom: 0.4rem;
+      }
+
+      p {
+        margin-left: 0.4rem;
+        font-weight: 300;
+      }
+
+      span {
+        margin-left: 0.8rem;
+      }
+
+      textarea {
+        outline: none;
+        padding: 1rem;
+        width: 65%;
+        max-width: 65%;
+        margin-left: 0.4rem;
+        max-height: 70rem;
+      }
+
+      button {
+        background: ${({ theme }) => theme.colors.blue['700']};
+        padding: 1rem;
+        border-radius: 0.4rem;
+        margin-top: 1.6rem;
+        margin-left: 0.4rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+        border: none;
+
+        &:hover {
+          background: ${({ theme }) => theme.colors.blue['900']};
+        }
+      }
+    }
   }
 `;
 
@@ -103,4 +154,35 @@ export const ShareContainer = styled.div`
   place-items: center;
   padding: 6.4rem 0;
   background: ${({ theme }) => theme.colors.dark['800']};
+  color: ${({ theme }) => theme.colors.light['100']};
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    strong {
+      font-size: 2.4rem;
+      font-weight: 400;
+      font-style: italic;
+      text-transform: uppercase;
+      margin-bottom: 2.4rem;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+
+      svg {
+        color: ${({ theme }) => theme.colors.blue['700']};
+
+        &:hover {
+          color: ${({ theme }) => theme.colors.blue['900']};
+        }
+      }
+
+    }
+  }
 `;

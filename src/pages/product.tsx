@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import * as Tabs from '@radix-ui/react-tabs';
 
+import Head from 'next/head';
+import { FacebookLogo, InstagramLogo } from 'phosphor-react';
 import {
   Container,
   ContainerDescriptionProduct,
@@ -18,6 +20,10 @@ import Highlights from '../components/Highlights';
 export default function Product() {
   return (
     <>
+      <Head>
+        <title>E-commerce | Produto</title>
+      </Head>
+
       <Container as="main">
         <Content>
           <Benefits />
@@ -35,22 +41,59 @@ export default function Product() {
       </Container>
       <Highlights visibleMostPurchased={false} titleCarousel="Você também vai gostar" />
       <ContainerDescriptionProduct>
+
         <ContentDescription>
           <Tabs.Root className="TabsRoot" defaultValue="tab1">
-            <Tabs.List className="TabsList" aria-label="Manage your account">
+
+            <Tabs.List className="TabsList">
               <Tabs.Trigger className="TabsTrigger" value="tab1">
-                Account
+                Descrição
               </Tabs.Trigger>
+
               <Tabs.Trigger className="TabsTrigger" value="tab2">
-                Password
+                Avaliações
               </Tabs.Trigger>
             </Tabs.List>
 
-            <Tabs.Content className="TabsContent" value="tab1" />
-            <Tabs.Content className="TabsContent" value="tab2" />
+            <Tabs.Content className="TabsContent" value="tab1">
+              <p className="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facere, eveniet necessitatibus odit, sapiente maiores,
+                voluptatem deleniti asperiores nesciunt mollitia blanditiis
+                modi aspernatur adipisci cum illum corporis earum. Neque, voluptas expedita.
+              </p>
+            </Tabs.Content>
+
+            <Tabs.Content className="TabsContent" value="tab2">
+              <div>
+                <strong>Opniões dos consumidores</strong>
+                <p>Tem esse produto? Seja o primeiro a avaliá-lo</p>
+                <span> * * * * * ( Avalie )</span>
+              </div>
+
+              <div>
+                <strong>Duvida dos consumidores</strong>
+                <p>
+                  Tem alguma duvida sobre esse produto? Pergunte ao lojista e a outros compradores!
+                </p>
+                <textarea name="" id="" cols={30} rows={10} />
+                <button type="button">Enviar pergunta</button>
+              </div>
+
+            </Tabs.Content>
           </Tabs.Root>
         </ContentDescription>
-        <ShareContainer />
+
+        <ShareContainer>
+          <div>
+            <strong>Compartilhe com seus amigos</strong>
+
+            <span>
+              <FacebookLogo size={48} />
+              <InstagramLogo size={48} />
+            </span>
+          </div>
+        </ShareContainer>
       </ContainerDescriptionProduct>
     </>
   );
