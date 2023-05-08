@@ -24,7 +24,7 @@ export default function useValidateForm<T extends FieldValues>(schema: any) {
   useEffect(() => {
     clearErrors();
     reset();
-  }, [path]);
+  }, [path, clearErrors, reset]);
 
   return {
     register,

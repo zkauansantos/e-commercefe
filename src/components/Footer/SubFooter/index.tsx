@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Content, Container } from './styles';
 
 export default function SubFooter() {
@@ -34,39 +35,51 @@ export default function SubFooter() {
 
           <ul>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/visa.png?v=637366559847970000"
                 alt=""
+                width={67.42}
+                height={20.52}
               />
             </li>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/hyper.png?v=637366559549400000"
                 alt=""
+                width={68}
+                height={30}
               />
             </li>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/american-express.png?v=637366559150130000"
                 alt=""
+                width={68}
+                height={68}
               />
             </li>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/elo.png?v=637366559432800000"
                 alt=""
+                width={52}
+                height={52}
               />
             </li>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/logo-1.png?v=637366559558370000"
                 alt=""
+                width={50}
+                height={36}
               />
             </li>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/pixLogoBack.png?v=637474399382630000"
                 alt=""
+                width={68}
+                height={30}
               />
             </li>
           </ul>
@@ -77,21 +90,27 @@ export default function SubFooter() {
 
           <ul>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/shield-1.png?v=637366559764000000"
                 alt=""
+                width={68}
+                height={70}
               />
             </li>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/shield-2.png?v=637366559765800000"
                 alt=""
+                width={68}
+                height={62}
               />
             </li>
             <li>
-              <img
+              <Image
                 src="https://www.artwalk.com.br/arquivos/shield-3.png?v=637366559767700000"
                 alt=""
+                width={69}
+                height={69}
               />
             </li>
           </ul>

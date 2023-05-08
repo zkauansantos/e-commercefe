@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ShippingMethod } from '../../../types/ShippingMethod';
 import Spinner from '../../Spinner';
 import { Container } from './styles';
@@ -19,7 +20,12 @@ export default function ShippingMethods({ shippingMethods, isLoading }: Shipping
       {valuesShippingPACandSEDEX.map((service) => (
         !isLoading && (
         <div key={service.id}>
-          <img src={service.company.picture} alt="correios" />
+          <Image
+            src={service.company.picture}
+            alt="correios"
+            width={56}
+            height={13}
+          />
           <div>
             <strong>{service.name}</strong>
             <span> até {service.custom_delivery_time} dias úteis</span>

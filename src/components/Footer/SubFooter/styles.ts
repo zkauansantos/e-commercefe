@@ -14,6 +14,7 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
+  gap: 3.2rem;
 
   .description {
     display: flex;
@@ -43,9 +44,9 @@ export const Content = styled.div`
   }
 
   .payment-methods {
+
     strong {
       font-size: 1.4rem;
-      margin-left: 2.4rem;
     }
 
     ul {
@@ -53,6 +54,7 @@ export const Content = styled.div`
       margin-top: 2.4rem;
       display: grid;
       grid-template-columns: repeat(3, auto);
+      gap: 2.4rem;
 
       li {
         display: flex;
@@ -66,7 +68,6 @@ export const Content = styled.div`
           justify-content: center;
           align-items: center;
           object-fit: cover;
-          width: 50%;
         }
       }
     }

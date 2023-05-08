@@ -1,5 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import Link from 'next/link';
+import Image from 'next/image';
 import { flickityOptions } from '../../utils/flickityOptions';
 
 import {
@@ -32,9 +33,11 @@ export default function Highlights({ visibleMostPurchased, titleCarousel }: High
           >
             {Array.from({ length: 15 }).map((q, i) => (
               <Card key={i}>
-                <img
+                <Image
                   src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
                   alt=""
+                  width={218}
+                  height={218}
                 />
 
                 <div>
@@ -59,9 +62,11 @@ export default function Highlights({ visibleMostPurchased, titleCarousel }: High
           <div className="list">
             {Array.from({ length: 4 }).map((q, i) => (
               <Card key={i}>
-                <img
+                <Image
                   src="https://artwalk.vteximg.com.br/arquivos/ids/367084-218-218/L0019-6-721-1.jpg?v=638152755550570000"
                   alt=""
+                  width={218}
+                  height={218}
                 />
 
                 <div>

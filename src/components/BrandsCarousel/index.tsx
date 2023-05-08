@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { flickityOptions } from '../../utils/flickityOptions';
 import {
   Brand, Carousel, Container, Content,
@@ -16,54 +17,16 @@ export default function BrandsCarousel() {
           reloadOnUpdate
           static
         >
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
-          <Brand>
-            <img
-              src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
-              alt="adidas"
-            />
-          </Brand>
+          {Array.from({ length: 10 }).map(() => (
+            <Brand key={Math.random()}>
+              <Image
+                src="https://www.artwalk.com.br/arquivos/logo-marcas-carrossel-adidas.png?v=637466770171800000"
+                alt="adidas"
+                width={56}
+                height={58}
+              />
+            </Brand>
+          ))}
         </Carousel>
       </Content>
     </Container>

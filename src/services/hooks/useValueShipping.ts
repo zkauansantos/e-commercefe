@@ -30,7 +30,7 @@ async function getPricesDelivery(cep: string): Promise<any> {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.API_KEY}`,
+        Authorization: `Bearer ${process.env.SECRET_API_KEY}`,
       },
     },
   );
