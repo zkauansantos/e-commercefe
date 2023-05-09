@@ -21,7 +21,7 @@ export default function Product() {
   return (
     <>
       <Head>
-        <title>E-commerce | Produto</title>
+        <title>E-commerce | Produto </title>
       </Head>
 
       <Container as="main">
