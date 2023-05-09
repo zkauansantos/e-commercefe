@@ -1,18 +1,25 @@
 /* eslint-disable react/jsx-props-no-spreading */
-
-import { InputErrorSpan } from '@/components/InputErrorSpan';
-import useValidateForm from '@/hooks/useValidateForm';
-import { registerUserFormSchema, singInFormSchema } from '@/schemas/pages/SignIn';
-import {
-  Container, ContainerForm, Field, Wrapper,
-} from '@/styles/pages/SignIn';
-import { RegisterFormData } from '@/types/Forms/registerFormData';
-import { SignInFormData } from '@/types/Forms/signInFormData';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FacebookLogo, GoogleLogo } from 'phosphor-react';
+
 import { SubmitHandler } from 'react-hook-form';
+import { FacebookLogo, GoogleLogo } from 'phosphor-react';
+
+import { InputErrorSpan } from '@/components/InputErrorSpan';
+
+import useValidateForm from '@/hooks/useValidateForm';
+
+import { registerUserFormSchema, singInFormSchema } from '@/schemas/pages/SignIn';
+import { RegisterFormData } from '@/types/Forms/registerFormData';
+import { SignInFormData } from '@/types/Forms/signInFormData';
+
+import {
+  Container,
+  ContainerForm,
+  Field,
+  Wrapper,
+} from '@/styles/pages/SignIn';
 
 export default function SignIn() {
   const { query } = useRouter();
