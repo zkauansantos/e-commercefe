@@ -5,8 +5,7 @@
     "airbnb-typescript"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "parser": "@typescript-eslint/parser"
+    "project": "./tsconfig.json"
   },
   "rules": {
     "react/react-in-jsx-scope": "off",

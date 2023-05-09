@@ -8,16 +8,23 @@ import type { AppProps } from 'next/app';
 import { QueryClientProvider } from 'react-query';
 import { ThemeProvider } from 'styled-components';
 import 'flickity/css/flickity.css';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </ThemeProvider>
-    </QueryClientProvider>
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </ThemeProvider>
+      </QueryClientProvider>
+    </>
   );
 }
