@@ -1,6 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import Link from 'next/link';
 import Image from 'next/image';
+
 import { flickityOptions } from '../../utils/flickityOptions';
 
 import {

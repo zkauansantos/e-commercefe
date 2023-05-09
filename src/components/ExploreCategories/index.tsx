@@ -1,6 +1,10 @@
 import { ArrowRight } from 'phosphor-react';
+
 import {
-  Category, CategoryGroupContainer, Container, Content,
+  Category,
+  CategoryGroupContainer,
+  Container,
+  Content,
 } from './styles';
 
 export default function ExploreCategories() {

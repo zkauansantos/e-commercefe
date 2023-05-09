@@ -1,7 +1,10 @@
-import { FacebookLogo, InstagramLogo } from 'phosphor-react';
 import { useRouter } from 'next/router';
-import { FooterContainer, Content } from './styles';
+
+import { FacebookLogo, InstagramLogo } from 'phosphor-react';
+
 import SubFooter from './SubFooter';
+
+import { FooterContainer, Content } from './styles';
 
 export default function Footer() {
   const { pathname } = useRouter();

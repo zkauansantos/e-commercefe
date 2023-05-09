@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import Disclaimer from '../Disclaimer';
 import MenuList from '../MenuList';
 import UserActions from '../UserActions';

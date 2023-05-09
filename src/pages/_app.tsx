@@ -1,14 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import Head from 'next/head';
+import type { AppProps } from 'next/app';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+
+import { QueryClientProvider } from 'react-query';
 import { queryClient } from '@/lib/queryClient';
+
 import { GlobalStyles } from '@/styles/GlobalStyles';
 import { theme } from '@/styles/theme/default';
-import type { AppProps } from 'next/app';
-import { QueryClientProvider } from 'react-query';
 import { ThemeProvider } from 'styled-components';
 import 'flickity/css/flickity.css';
-import Head from 'next/head';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

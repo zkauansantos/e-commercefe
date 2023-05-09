@@ -1,8 +1,9 @@
+import Link from 'next/link';
+
 import * as Popover from '@radix-ui/react-popover';
 
 import { UserCircle, ShoppingBagOpen } from 'phosphor-react';
 
-import Link from 'next/link';
 import {
   PopoverContent,
   UserBagContainer,

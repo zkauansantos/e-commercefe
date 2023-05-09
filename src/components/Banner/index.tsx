@@ -1,7 +1,8 @@
-import { ArrowRight } from 'phosphor-react';
 import Link from 'next/link';
-
 import Image from 'next/image';
+
+import { ArrowRight } from 'phosphor-react';
+
 import { Container, Content } from './styles';
 
 export default function Banner() {

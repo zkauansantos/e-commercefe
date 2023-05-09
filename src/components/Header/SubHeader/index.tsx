@@ -1,5 +1,7 @@
-import { Storefront, ShoppingCart } from 'phosphor-react';
 import { useRouter } from 'next/router';
+
+import { Storefront, ShoppingCart } from 'phosphor-react';
+
 import { Container } from './styles';
 
 export default function SubHeader() {

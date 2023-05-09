@@ -1,8 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import Head from 'next/head';
+
 import * as Tabs from '@radix-ui/react-tabs';
 
-import Head from 'next/head';
 import { FacebookLogo, InstagramLogo } from 'phosphor-react';
+
+import Benefits from '@/components/Benefits';
+import ProductWidget from '@/components/ProductWidget';
+import CalcShipping from '@/components/CalcShipping';
+import Highlights from '@/components/Highlights';
+
 import {
   Container,
   ContainerDescriptionProduct,
@@ -11,11 +18,6 @@ import {
   ShareContainer,
   Wrapper,
 } from '../styles/pages/Product';
-
-import Benefits from '../components/Benefits';
-import ProductWidget from '../components/ProductWidget';
-import CalcShipping from '../components/CalcShipping';
-import Highlights from '../components/Highlights';
 
 export default function Product() {
   return (

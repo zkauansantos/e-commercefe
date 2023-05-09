@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import { Content, Container } from './styles';
 
 export default function SubFooter() {

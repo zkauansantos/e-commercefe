@@ -1,6 +1,9 @@
 import Image from 'next/image';
-import { ShippingMethod } from '../../../types/ShippingMethod';
+
+import { ShippingMethod } from '@/types/ShippingMethod';
+
 import Spinner from '../../Spinner';
+
 import { Container } from './styles';
 
 interface ShippingMethodsProps {

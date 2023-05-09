@@ -3,17 +3,20 @@
 
 import { useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
+import { ArrowRight, Truck } from 'phosphor-react';
 
 import useValidateForm from '@/hooks/useValidateForm';
-import { CEPSchemaYup } from '@/schemas/pages/Product';
 import useValueShipping from '@/services/hooks/useValueShipping';
-import { CEPInputData } from '@/types/Forms/CEPInputData';
-import { ShippingMethod } from '@/types/ShippingMethod';
-import { ArrowRight, Truck } from 'phosphor-react';
+
 import formatCEP from '@/utils/formatCEP';
-import { Container, ContainerForm, Form } from './styles';
-import { InputErrorSpan } from '../InputErrorSpan';
+import { CEPSchemaYup } from '@/schemas/pages/Product';
+import { CEPInputData } from '@/types/Forms/CEPInputData';
+
+import { ShippingMethod } from '@/types/ShippingMethod';
 import ShippingMethods from './ShippingMethods';
+import { InputErrorSpan } from '../InputErrorSpan';
+
+import { Container, ContainerForm, Form } from './styles';
 
 export default function CalcShipping() {
   const { mutateAsync, isLoading } = useValueShipping();

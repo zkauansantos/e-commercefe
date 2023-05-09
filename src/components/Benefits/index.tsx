@@ -4,6 +4,7 @@ import {
   Percent,
   Truck,
 } from 'phosphor-react';
+
 import { Container } from './styles';
 
 export default function Benefits() {

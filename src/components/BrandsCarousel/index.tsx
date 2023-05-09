@@ -1,7 +1,12 @@
 import Image from 'next/image';
+
 import { flickityOptions } from '../../utils/flickityOptions';
+
 import {
-  Brand, Carousel, Container, Content,
+  Brand,
+  Carousel,
+  Container,
+  Content,
 } from './styles';
 
 export default function BrandsCarousel() {
