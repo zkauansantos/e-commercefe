@@ -56,7 +56,8 @@ export const ContainerSizes = styled.div`
       align-items: center;
       justify-content: center;
       gap: 0.8rem;
-      padding: 0 2rem;
+      padding: 0 1.6rem;
+      cursor: not-allowed;
       border: 1px solid ${({ theme }) => theme.colors.light['400']};
       font-size: 1.2rem;
 

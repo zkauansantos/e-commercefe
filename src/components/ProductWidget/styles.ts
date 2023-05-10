@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 2.4rem 4.8rem 4.8rem 4.8rem;
+  padding: 0 4.8rem 4.8rem 4.8rem;
   max-width: 50rem;
   position: relative;
   background-color: ${({ theme }) => theme.colors.light['100']};

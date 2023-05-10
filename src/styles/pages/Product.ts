@@ -14,16 +14,6 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   font-style: italic;
-
-  .container-image {
-    padding: 2.4rem 4.8rem 4.8rem 4.8rem;
-
-    .img {
-      width: 500px;
-      height: 500px;
-      background-color: #ccc;
-    }
-  }
 `;
 
 export const Wrapper = styled.div`

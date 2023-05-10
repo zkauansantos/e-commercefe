@@ -9,7 +9,6 @@ export const Container = styled.div`
   padding: 0 4.6rem;
 
   .centralizer {
-    padding-right: 4.6rem ;
     display: flex;
     flex-direction: column;
     align-items: center;
