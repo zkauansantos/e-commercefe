@@ -16,18 +16,21 @@ export default function Benefits() {
           Compre no site e <span>retire na loja</span>
         </p>
       </div>
+
       <div>
         <Truck />
         <p>
           <span>Frete grátis</span> confira as regras
         </p>
       </div>
+
       <div>
         <ArrowsLeftRight />
         <p>
           <span>Até 30 dias</span> pra solicitar sua troca
         </p>
       </div>
+
       <div>
         <Percent />
         <p>

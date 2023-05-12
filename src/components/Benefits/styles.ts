@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 4.6rem;
   border-radius: 4px;
@@ -14,7 +14,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    padding-left: 2.4rem;
+    padding: 0 2.4rem;
 
     svg {
       color: ${({ theme }) => theme.colors.blue['700']};
@@ -31,10 +31,14 @@ export const Container = styled.div`
       }
     }
 
-    :first-child {
-      border-left: none;
+    :last-child {
+      border-right: none;
     }
 
-    border-left: 3px solid ${({ theme }) => theme.colors.light['400']};
+    border-right: 3px solid ${({ theme }) => theme.colors.light['400']};
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
