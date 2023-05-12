@@ -117,6 +117,7 @@ export const Field = styled.label<{ error: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
 
   input {
     padding: 1rem;
@@ -131,5 +132,19 @@ export const Field = styled.label<{ error: boolean }>`
       ? `1px solid ${theme.colors.red['500']}`
       : `1px solid ${theme.colors.light['400']}`
   )};
+  }
+
+  .show-password {
+    position: absolute;
+    border: none;
+    right: 5%;
+    top: 43%;
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        opacity: 0.6;
+      }
+    }
   }
 `;

@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { SubmitHandler } from 'react-hook-form';
-import { FacebookLogo, GoogleLogo } from 'phosphor-react';
+import {
+  Eye, EyeSlash, FacebookLogo, GoogleLogo,
+} from 'phosphor-react';
 
 import { InputErrorSpan } from '@/components/InputErrorSpan';
 
@@ -20,12 +22,14 @@ import {
   Field,
   Wrapper,
 } from '@/styles/pages/SignIn';
+import { useState } from 'react';
 
 export default function SignIn() {
   const { query } = useRouter();
   const { path } = query;
   const isLoginPath = path === 'login';
   const schema = isLoginPath ? singInFormSchema : registerUserFormSchema;
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -66,13 +70,38 @@ export default function SignIn() {
             </Field>
 
             <Field error={!!errors.password}>
-              <input type="password" placeholder="Senha" {...register('password')} />
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Senha"
+                {...register('password')}
+              />
+              <button
+                type="button"
+                className="show-password"
+                onClick={() => setShowPassword((prev) => !prev)}
+              >
+                {!showPassword ? <Eye size={26} /> : <EyeSlash size={26} />}
+              </button>
+
               {!!errors.password && <InputErrorSpan>{errors.password.message}</InputErrorSpan>}
             </Field>
 
             {!isLoginPath && (
             <Field error={!!errors.passwordConfirmation}>
-              <input type="password" placeholder="Confirme sua senha" {...register('passwordConfirmation')} />
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Confirme sua senha"
+                {...register('passwordConfirmation')}
+              />
+
+              <button
+                type="button"
+                className="show-password"
+                onClick={() => setShowPassword((prev) => !prev)}
+              >
+                {!showPassword ? <Eye size={26} /> : <EyeSlash size={26} />}
+              </button>
+
               {!!errors.passwordConfirmation && (
                 <InputErrorSpan>{errors.passwordConfirmation.message}</InputErrorSpan>
               )}
