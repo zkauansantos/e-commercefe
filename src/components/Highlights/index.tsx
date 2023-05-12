@@ -60,7 +60,13 @@ export default function Highlights({ visibleMostPurchased, titleCarousel }: High
         <ContainerMostPurchased>
           <h3>Mais comprados</h3>
 
-          <div className="list">
+          <Carousel
+            elementType="div"
+            options={flickityOptions}
+            disableImagesLoaded={false}
+            reloadOnUpdate
+            static
+          >
             {Array.from({ length: 4 }).map((q, i) => (
               <Card key={i}>
                 <Image
@@ -82,7 +88,7 @@ export default function Highlights({ visibleMostPurchased, titleCarousel }: High
                 </Link>
               </Card>
             ))}
-          </div>
+          </Carousel>
         </ContainerMostPurchased>
         )}
       </Content>

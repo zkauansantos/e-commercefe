@@ -20,9 +20,13 @@ export const ContainerHighlights = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 4.8rem;
 
   h3 {
+    width: 100%;
+    padding-left: 2rem;
     font-size: 1.8rem;
     font-style: italic;
     color: ${({ theme }) => theme.colors.dark['500']};
@@ -32,6 +36,7 @@ export const ContainerHighlights = styled.div`
 
 export const Carousel = styled(Flickity)`
   width: 100%;
+  padding: 0 4.8rem;
 
   .flickity-prev-next-button {
     width: 4rem;
@@ -41,32 +46,6 @@ export const Carousel = styled(Flickity)`
 
   .flickity-button {
     color: ${({ theme }) => theme.colors.blue['700']};
-
-    ::before {
-      content: '';
-      position: absolute;
-      width: 3rem;
-      height: 0.4rem;
-      top: 1.8rem;
-      border-radius: 5px;
-      background: ${({ theme }) => theme.colors.blue['700']};
-    }
-  }
-
-  .flickity-prev-next-button.previous {
-    left: -6rem;
-
-    ::before {
-      left: 1.4rem;
-    }
-  }
-
-  .flickity-prev-next-button.next {
-    right: -6rem;
-
-    ::before {
-      right: 1.4rem;
-    }
   }
 `;
 
@@ -79,6 +58,7 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 25%;
 
   div {
     margin-top: 1.2rem;
@@ -121,6 +101,18 @@ export const Card = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1140px) {
+    width: 35%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerMostPurchased = styled.div`
@@ -132,21 +124,10 @@ export const ContainerMostPurchased = styled.div`
 
   h3 {
     width: 100%;
-    align-self: self-start;
+    padding-left: 2rem;
     font-style: italic;
     color: ${({ theme }) => theme.colors.dark['500']};
     margin-bottom: 2.4rem;
     font-size: 1.8rem;
-  }
-
-  .list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-
-    div {
-      margin: 0;
-    }
   }
 `;

@@ -53,7 +53,7 @@ export const MenuRoot = styled(NavigationMenu.Root)`
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 99vw;
   z-index: 2;
 `;
 

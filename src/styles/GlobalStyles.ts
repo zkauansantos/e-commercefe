@@ -9,7 +9,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body, html {
-    overflow-x: hidden;
     font-size: 62.5%;
   }
 

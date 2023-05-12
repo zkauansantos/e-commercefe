@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <GlobalStyles />
           <Header />
           <Component {...pageProps} />
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </QueryClientProvider>
     </>

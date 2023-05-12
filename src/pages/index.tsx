@@ -14,9 +14,9 @@ export default function Home() {
       </Head>
       <Hero />
       <Highlights visibleMostPurchased titleCarousel="Destaques da Semana" />
-      <ExploreCategories />
-      <Banner />
-      <BrandsCarousel />
+      {/* <ExploreCategories /> */}
+      {/* <Banner /> */}
+      {/* <BrandsCarousel /> */}
     </>
   );
 }
