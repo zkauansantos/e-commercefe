@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
-import Banner from '@/components/Banner';
-import BrandsCarousel from '@/components/BrandsCarousel';
-import ExploreCategories from '@/components/ExploreCategories';
+// import Banner from '@/components/Banner';
+// import BrandsCarousel from '@/components/BrandsCarousel';
+// import ExploreCategories from '@/components/ExploreCategories';
 import Hero from '@/components/Hero';
 import Highlights from '@/components/Highlights';
 

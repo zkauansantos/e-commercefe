@@ -37,4 +37,24 @@ export const GlobalStyles = createGlobalStyle`
     -moz-appearance: textfield;
     appearance: textfield;
   }
+
+  .flickity-page-dot.is-selected {
+    background-color: transparent;
+    opacity: 1;
+    overflow: visible;
+    position: relative;
+
+    ::before {
+      content: "";
+      display: block;
+      width: 0.5rem;
+      height: 1.125rem;
+      border: 2px solid #ff4f00;
+      position: absolute;
+      left: 7px;
+      bottom: -5px;
+      transform: translate(calc(-50% - 2px), -2px) rotate(38deg);
+      border-radius: 5px;
+    }
+  }
 `;

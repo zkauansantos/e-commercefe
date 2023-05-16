@@ -19,7 +19,11 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
-  padding: 0px 0.6rem;
+  padding: 0 0.6rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const Carousel = styled(Flickity)`
@@ -28,38 +32,32 @@ export const Carousel = styled(Flickity)`
   border-radius: 0px 0px 4px 4px;
 
   .flickity-page-dots {
-    bottom: 0px;
-  }
-
-  .flickity-page-dots .dot {
-    width: 1.2rem;
-    height: 1.2rem;
-    opacity: 1;
-    background: transparent;
-    border: 2px solid white;
-  }
-
-  .flickity-page-dots .dot.is-selected {
-    background: white;
-  }
-
-  .flickity-button {
-    background: none;
+    bottom: 1.2rem;
   }
 
   .flickity-prev-next-button {
-    width: 5rem;
-    height: 6rem;
     border-radius: 5px;
+    background: none;
   }
+
   .flickity-button-icon {
     fill: ${({ theme }) => theme.colors.blue['700']};
   }
+
   .flickity-prev-next-button.previous {
-    left: -4.5rem;
+    left: -4rem;
   }
+
   .flickity-prev-next-button.next {
-    right: -4.5rem;
+    right: -4rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    .flickity-prev-next-button {
+      display: none;
+    }
   }
 `;
 

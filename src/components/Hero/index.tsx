@@ -16,12 +16,12 @@ export default function Hero() {
         <Carousel
           className="carousel"
           elementType="div"
-          options={{ ...flickityOptions, cellAlign: 'center' }}
+          options={{ ...flickityOptions, cellAlign: 'center', pageDots: true }}
           disableImagesLoaded={false}
           reloadOnUpdate
           static
         >
-          {Array.from({ length: 5 }).map(() => (
+          {Array.from({ length: 3 }).map(() => (
             <View key={Math.random()} />
           ))}
         </Carousel>
