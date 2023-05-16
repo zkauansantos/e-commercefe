@@ -34,12 +34,12 @@ export const Container = styled.header`
 export const Content = styled.div`
   position: relative;
   width: 100%;
-  max-width: 1240px;
-  height: 80px;
+  max-width: 124rem;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 5px;
+  padding: 0 1rem;
 
   h1 {
     color: #fff;

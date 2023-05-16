@@ -13,6 +13,10 @@ export const MenuListStyled = styled(NavigationMenu.List)`
   button,p {
     all: unset;
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MenuIndicator = styled(NavigationMenu.Indicator)`
