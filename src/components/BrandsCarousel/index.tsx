@@ -3,10 +3,7 @@ import Image from 'next/image';
 import { flickityOptions } from '../../utils/flickityOptions';
 
 import {
-  Brand,
-  Carousel,
-  Container,
-  Content,
+  Brand, Carousel, Container, Content,
 } from './styles';
 
 export default function BrandsCarousel() {
@@ -17,7 +14,10 @@ export default function BrandsCarousel() {
 
         <Carousel
           elementType="div"
-          options={{ ...flickityOptions, pageDots: true, groupCells: 4 }}
+          options={{
+            ...flickityOptions,
+            pageDots: true,
+          }}
           disableImagesLoaded={false}
           reloadOnUpdate
           static

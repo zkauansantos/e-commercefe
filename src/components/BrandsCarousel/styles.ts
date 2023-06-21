@@ -20,7 +20,8 @@ export const Content = styled.div`
   padding-bottom: 6.4rem;
 
   h3 {
-    font-size: 2.4rem;
+    padding-left: 2.4rem;
+    font-size: clamp(1.8rem, 4vw ,2.8rem);
     font-style: italic;
     margin-bottom: 6.4rem;
   }
@@ -28,9 +29,14 @@ export const Content = styled.div`
 
 export const Carousel = styled(Flickity)`
   width: 100%;
+  padding: 0 2.4rem;
 
   .flickity-page-dots {
     bottom: -4.5rem;
+
+    @media screen and (max-width: 680px) {
+      padding-right: 4.8rem;
+    }
   }
 
   .flickity-page-dots .dot {
@@ -60,8 +66,11 @@ export const Carousel = styled(Flickity)`
       border-radius: 5px;
     }
   }
-
   .flickity-button {
+    display: none;
+  }
+
+  /* .flickity-button {
     color: ${({ theme }) => theme.colors.blue['700']};
     width: 5rem;
     height: 5rem;
@@ -88,7 +97,7 @@ export const Carousel = styled(Flickity)`
   }
 
   .flickity-prev-next-button.previous {
-    left: -8rem;
+    left: -1rem;
 
     svg {
       margin-right: 0.8rem;
@@ -100,7 +109,7 @@ export const Carousel = styled(Flickity)`
   }
 
   .flickity-prev-next-button.next {
-    right: -8rem;
+    right: -1rem;
 
     svg {
       margin-left: 0.8rem;
@@ -109,7 +118,7 @@ export const Carousel = styled(Flickity)`
     ::before {
       right: 1.5rem;
     }
-  }
+  } */
 `;
 
 export const Brand = styled.div`
@@ -126,6 +135,5 @@ export const Brand = styled.div`
 
   img {
     width: 100%;
-    color: red;
   }
 `;

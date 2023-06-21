@@ -14,10 +14,8 @@ export const Container = styled.header`
 
   a {
     z-index: 5;
-
-    h1 {
-      font-size: 3.2rem;
-    }
+    font-size: clamp(1.4rem, 1.8vw, 2rem);
+    font-weight: bold;
   }
 
   .view-position {

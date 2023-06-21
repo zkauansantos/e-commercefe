@@ -20,7 +20,7 @@ export default function Banner() {
 
         <p>Fique por dentro dos lançamentos!</p>
 
-        <Link href="/" className="button">
+        <Link href="/product" className="button">
           <span>Ver mais</span>
           <span className="arrow">
             <ArrowRight />

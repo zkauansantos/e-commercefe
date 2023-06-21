@@ -83,6 +83,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     gap: 1.6rem;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     border-radius: 4px;
     padding: 0.4rem 0;
 

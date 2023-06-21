@@ -1,10 +1,7 @@
 import { ArrowRight } from 'phosphor-react';
 
 import {
-  Category,
-  CategoryGroupContainer,
-  Container,
-  Content,
+  Category, CategoryGroupContainer, Container, Content,
 } from './styles';
 
 export default function ExploreCategories() {
@@ -15,7 +12,7 @@ export default function ExploreCategories() {
 
         <CategoryGroupContainer justify="space-around">
           <Category
-            width="450px"
+            width="45rem"
             bg="https://www.artwalk.com.br/arquivos/O_que_voc%C3%AA_esta_buscando_tenis.jpg"
           >
             <div className="title-arrow">
@@ -25,7 +22,7 @@ export default function ExploreCategories() {
           </Category>
 
           <Category
-            width="350px"
+            width="35rem"
             bg="https://www.artwalk.com.br/arquivos/O_que_voc%C3%AA_esta_buscando_roupa.jpg"
           >
             <div className="title-arrow">
@@ -37,7 +34,7 @@ export default function ExploreCategories() {
 
         <CategoryGroupContainer justify="space-evenly">
           <Category
-            width="290px"
+            width="29rem"
             bg="https://www.artwalk.com.br/arquivos/O_que_voc%C3%AA_esta_buscando_acessorios.jpg"
           >
             <div className="title-arrow">
@@ -46,7 +43,7 @@ export default function ExploreCategories() {
             </div>
           </Category>
           <Category
-            width="450px"
+            width="45rem"
             bg="https://www.artwalk.com.br/arquivos/O_que_voc%C3%AA_esta_buscando_outlet.jpg"
           >
             <div className="title-arrow">

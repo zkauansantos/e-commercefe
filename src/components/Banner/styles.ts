@@ -20,7 +20,7 @@ export const Content = styled.div`
   gap: 2.4rem;
 
   h3 {
-    font-size: 6.4rem;
+    font-size: clamp(4rem, 10vw, 6.4rem);
     word-wrap: break-word;
     width: 25rem;
     text-align: center;
