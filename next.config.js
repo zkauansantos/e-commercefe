@@ -11,6 +11,7 @@ const nextConfig = {
   env: {
     SECRET_API_KEY: process.env.SECRET_API_KEY,
   },
+  pageExtensions: ['page.tsx', 'api.ts', 'api.tsx'],
 };
 
 module.exports = nextConfig;

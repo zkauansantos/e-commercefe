@@ -50,7 +50,8 @@ export default function SignIn() {
   return (
     <>
       <Head>
-        <title>E-commerce | {isLoginPath ? 'Login' : 'Cadastro'}</title>
+        {isLoginPath && <title> E-commerce | Login</title>}
+        {!isLoginPath && <title> E-commerce | Cadastro</title>}
       </Head>
       <Container>
         <Wrapper>

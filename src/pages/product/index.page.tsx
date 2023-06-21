@@ -16,7 +16,7 @@ import {
   Content,
   ShareContainer,
   Wrapper,
-} from '../styles/pages/Product';
+} from '../../styles/pages/Product';
 
 export default function Product() {
   function shareWithFriends(url: string) {
