@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 import Disclaimer from '../Disclaimer';
-import MenuList from '../MenuList';
 import UserActions from '../UserActions';
 import SubHeader from './SubHeader';
 
 import {
   Container, Content, MenuRoot, MenuViewPort,
 } from './styles';
+import MenuList from './MenuList';
 
 export default function Header() {
   return (

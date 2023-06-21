@@ -1,6 +1,6 @@
-import { flickityOptions } from '../../utils/flickityOptions';
+import { flickityOptions } from '@/utils/flickityOptions';
 
-import Benefits from '../Benefits';
+import Benefits from '@/components/Benefits';
 
 import {
   Container,

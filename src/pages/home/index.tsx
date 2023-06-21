@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
-import Banner from '@/components/Banner';
-import ExploreCategories from '@/components/ExploreCategories';
-import Hero from '@/components/Hero';
 import Highlights from '@/components/Highlights';
-import BrandsCarousel from '@/components/BrandsCarousel';
 import Footer from '@/components/Footer';
+import BrandsCarousel from './components/BrandsCarousel';
+import Hero from './components/Hero';
+import Banner from './components/Banner';
+import ExploreCategories from './components/ExploreCategories';
 
 export default function Home() {
   return (

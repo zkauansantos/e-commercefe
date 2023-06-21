@@ -3,7 +3,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import { useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
+
+import * as yup from 'yup';
+
 import {
   Eye, EyeSlash, FacebookLogo, GoogleLogo,
 } from 'phosphor-react';
@@ -12,17 +16,30 @@ import { InputErrorSpan } from '@/components/InputErrorSpan';
 
 import useValidateForm from '@/hooks/useValidateForm';
 
-import { registerUserFormSchema, singInFormSchema } from '@/schemas/pages/SignIn';
 import { RegisterFormData } from '@/types/Forms/registerFormData';
 import { SignInFormData } from '@/types/Forms/signInFormData';
 
 import {
-  Container,
-  ContainerForm,
-  Field,
-  Wrapper,
-} from '@/styles/pages/SignIn';
-import { useState } from 'react';
+  Container, ContainerForm, Field, Wrapper,
+} from './styles';
+
+export const registerUserFormSchema = yup.object().shape({
+  name: yup.string().required('Nome obrigatório'),
+  email: yup.string().required('E-mail obrigatório').email('E-mail inválido'),
+  password: yup
+    .string()
+    .required('Senha obrigatória')
+    .min(6, 'No mínimo 6 caracteres'),
+  passwordConfirmation: yup
+    .string()
+    .required('Senha obrigatória')
+    .oneOf(['', yup.ref('password')], 'As senhas precisam ser iguais'),
+});
+
+export const singInFormSchema = yup.object().shape({
+  email: yup.string().required('E-mail obrigatório').email('E-mail inválido'),
+  password: yup.string().required('Senha obrigatória'),
+});
 
 export default function SignIn() {
   const { query } = useRouter();
@@ -32,11 +49,7 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
 
   const {
-    register,
-    handleSubmit,
-    errors,
-    isSubmitting,
-    isLoading,
+    register, handleSubmit, errors, isSubmitting, isLoading,
   } = useValidateForm<SignInFormData | RegisterFormData>(schema);
 
   const handleSignIn: SubmitHandler<SignInFormData | RegisterFormData> = async (
@@ -59,15 +72,19 @@ export default function SignIn() {
             <h1>{isLoginPath ? 'Entrar' : 'Cadastro'}</h1>
 
             {!isLoginPath && (
-            <Field error={!!errors.name}>
-              <input type="text" placeholder="Nome" {...register('name')} />
-              {!!errors.name && <InputErrorSpan>{errors.name.message}</InputErrorSpan>}
-            </Field>
+              <Field error={!!errors.name}>
+                <input type="text" placeholder="Nome" {...register('name')} />
+                {!!errors.name && (
+                  <InputErrorSpan>{errors.name.message}</InputErrorSpan>
+                )}
+              </Field>
             )}
 
             <Field error={!!errors.email}>
               <input type="email" placeholder="E-mail" {...register('email')} />
-              {!!errors.email && <InputErrorSpan>{errors.email.message}</InputErrorSpan>}
+              {!!errors.email && (
+                <InputErrorSpan>{errors.email.message}</InputErrorSpan>
+              )}
             </Field>
 
             <Field error={!!errors.password}>
@@ -84,29 +101,33 @@ export default function SignIn() {
                 {!showPassword ? <Eye size={26} /> : <EyeSlash size={26} />}
               </button>
 
-              {!!errors.password && <InputErrorSpan>{errors.password.message}</InputErrorSpan>}
+              {!!errors.password && (
+                <InputErrorSpan>{errors.password.message}</InputErrorSpan>
+              )}
             </Field>
 
             {!isLoginPath && (
-            <Field error={!!errors.passwordConfirmation}>
-              <input
-                type={showPassword ? 'text' : 'password'}
-                placeholder="Confirme sua senha"
-                {...register('passwordConfirmation')}
-              />
+              <Field error={!!errors.passwordConfirmation}>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  placeholder="Confirme sua senha"
+                  {...register('passwordConfirmation')}
+                />
 
-              <button
-                type="button"
-                className="show-password"
-                onClick={() => setShowPassword((prev) => !prev)}
-              >
-                {!showPassword ? <Eye size={26} /> : <EyeSlash size={26} />}
-              </button>
+                <button
+                  type="button"
+                  className="show-password"
+                  onClick={() => setShowPassword((prev) => !prev)}
+                >
+                  {!showPassword ? <Eye size={26} /> : <EyeSlash size={26} />}
+                </button>
 
-              {!!errors.passwordConfirmation && (
-                <InputErrorSpan>{errors.passwordConfirmation.message}</InputErrorSpan>
-              )}
-            </Field>
+                {!!errors.passwordConfirmation && (
+                  <InputErrorSpan>
+                    {errors.passwordConfirmation.message}
+                  </InputErrorSpan>
+                )}
+              </Field>
             )}
 
             <div>
@@ -126,27 +147,22 @@ export default function SignIn() {
             </div>
 
             {!(isSubmitting || isLoading) && (
-            <>
-              {isLoginPath && (
-              <p>
-                Não tem login?
-                <Link href="/singin/register">
-                  Cadastre-se
-                </Link>
-              </p>
-              )}
+              <>
+                {isLoginPath && (
+                  <p>
+                    Não tem login?
+                    <Link href="/singin/register">Cadastre-se</Link>
+                  </p>
+                )}
 
-              {!isLoginPath && (
-              <p>
-                Já possui conta?
-                <Link href="/singin/login">
-                  Entrar
-                </Link>
-              </p>
-              )}
-            </>
+                {!isLoginPath && (
+                  <p>
+                    Já possui conta?
+                    <Link href="/singin/login">Entrar</Link>
+                  </p>
+                )}
+              </>
             )}
-
           </ContainerForm>
         </Wrapper>
       </Container>

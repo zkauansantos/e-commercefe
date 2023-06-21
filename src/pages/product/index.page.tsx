@@ -1,14 +1,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import Head from 'next/head';
+
 import { FacebookLogo, InstagramLogo } from 'phosphor-react';
 
 import Benefits from '@/components/Benefits';
-import ProductWidget from '@/components/ProductWidget';
-import CalcShipping from '@/components/CalcShipping';
 import Highlights from '@/components/Highlights';
-import DescriptionProduct from '@/components/DescriptionProduct';
-import TenisCarouselGallery from '@/components/TenisCarouselGallery';
+import ProductWidget from './components/ProductWidget';
+import CalcShipping from './components/CalcShipping';
+import DescriptionProduct from './components/DescriptionProduct';
+import TenisCarouselGallery from './components/TenisCarouselGallery';
 
 import {
   Container,
@@ -16,7 +17,7 @@ import {
   Content,
   ShareContainer,
   Wrapper,
-} from '../../styles/pages/Product';
+} from './styles';
 
 export default function Product() {
   function shareWithFriends(url: string) {

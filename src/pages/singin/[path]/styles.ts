@@ -138,7 +138,7 @@ export const Field = styled.label<{ error: boolean }>`
     position: absolute;
     border: none;
     right: 5%;
-    top: 43%;
+    top: 2.4rem;
     cursor: pointer;
 
     &:hover {

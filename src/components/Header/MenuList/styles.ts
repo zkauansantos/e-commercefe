@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import * as animations from '../../styles/animations/menu';
+import * as animations from '@/styles/animations/menu';
 
 export const MenuListStyled = styled(NavigationMenu.List)`
   display: flex;

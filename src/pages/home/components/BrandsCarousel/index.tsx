@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { flickityOptions } from '../../utils/flickityOptions';
+import { flickityOptions } from '@/utils/flickityOptions';
 
 import {
   Brand, Carousel, Container, Content,
